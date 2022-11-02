@@ -5,8 +5,8 @@
 #ifndef LABOCHKAOOP_EVENT_H
 #define LABOCHKAOOP_EVENT_H
 class Cell;
-#include "../Logs/Subject.h"
-#include "../LogsInfo/LogOutInfo.h"
+#include "../LOG/Logs/Subject.h"
+#include "../LOG/LogsInfo/LogOutInfo.h"
 class Event: public Subject{
 public:
 

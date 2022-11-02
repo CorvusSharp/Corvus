@@ -3,7 +3,7 @@
 //
 
 #include "Mediator.h"
-#include "../Logs/LogsStatus.h"
+#include "../LOG/Logs/LogsStatus.h"
 
 void Mediator::start() {
     bool res = true;

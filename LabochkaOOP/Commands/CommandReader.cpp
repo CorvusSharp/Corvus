@@ -4,16 +4,16 @@
 
 #include "CommandReader.h"
 
-    void CommandReader::set_size(){
-        while (true){
-
-            std::cout<<"Введите Высоту:"; std::cin>>height;
-
-            std::cout<<"Введите ширину:"; std::cin>>width;
-            if(valid_arg(height) && valid_arg(width)){
+    void CommandReader::set_size() {
+        while (true) {
+            std::cout << "Введите Высоту:";
+            std::cin >> height;
+            std::cout << "Введите ширину:";
+            std::cin >> width;
+            if (valid_arg(height) && valid_arg(width)) {
+                Message message(GAME, "Height: " + std::to_string(height) + "Width: " + std::to_string(width));
+                LOG.print(message);
                 break;
-            } else{
-               auto a = arg_error();
             }
         }
     }
@@ -22,10 +22,7 @@
         std::cin>>sym;
         return sym;
     }
-    int CommandReader::arg_error(){
-        std::cout <<"\nВы вели отрицательно значение, попробуйте снова"<<std::endl;
-        return 0;
-    }
+
     bool CommandReader::valid_arg(int a){
         if (a<=0){
             return false;
@@ -39,25 +36,40 @@
         std::cout<<" Введите команду: ";
         input_sym(sym);
         switch (sym) {
-            case 'w':
+            case 'w': {
                 step = Person::UP;
+                Message message(GAME, "Пользователь ввел команду: w");
+                LOG.print(message);
                 break;
-            case 's':
+            }
+            case 's': {
                 step = Person::DOWN;
+                Message message(GAME, "Пользователь ввел команду: s" );
+                LOG.print(message);
                 break;
-            case 'd':
-                step = Person::RIGHT;
-                break;
-            case 'a':
+            }
+                case 'd': {
+                    step = Person::RIGHT;
+                    Message message(GAME, "Пользователь ввел команду: d");
+                    LOG.print(message);
+                    break;
+                }
+            case 'a': {
                 step = Person::LEFT;
+                Message message(GAME, "Пользователь ввел команду: a");
+                LOG.print(message);
                 break;
-            case 'e':
+            }
+            case 'e': {
                 step = Person::EXIT;
-                std::cerr<<"Игра Закончена!"<<std::endl;
+                Message message(GAME, "Пользователь ввел команду: e");
+                LOG.print(message);
                 break;
+            }
             default:
-                std::cerr<<"Вы ввели не правильную команду"<<std::endl;
                 step = Person::NOTHING;
+                Message message(ERROR,"Вы ввели не правильную команду");
+                LOG.print(message);
                 break;
         }
     }
@@ -67,7 +79,8 @@
     }
 
     void CommandReader::print_death(){
-    std::cerr<<"Вы откинулуись!";
+        Message message(GAME, "Персонаж умер");
+        LOG.print(message);
     }
 
     int CommandReader::get_width()const{
@@ -88,34 +101,6 @@
     }
 
 
-bool CommandReader::set_move(LogOutInfo *info) {
-    char res;
-    std::cout << "Move to: \n";
-    std::cin >> res;
-    switch (res) {
-        case 'w':
-            this->move = MOVES::UP;
-            break;
-        case 's':
-            this->move = MOVES::DOWN;
-            break;
-        case 'a':
-            this->move = MOVES::LEFT;
-            break;
-        case 'd':
-            this->move = MOVES::RIGHT;
-            break;
-        case 'q': {
-            Message message(STATUS, "Game over");
-            notify(message);
-            return false;
-        }
-        default:
-            this->move = MOVES::NOWHERE;
-            break;
-    }
-    return true;
-}
 
 void CommandReader::set_output() {
     char res;
@@ -128,10 +113,10 @@ void CommandReader::set_output() {
             this->outputs.push_back(OUTPUT::FILEOUT);
             break;
         case '1': {
-            this->outputs.push_back(OUTPUT::FILEOUT);
             this->outputs.push_back(OUTPUT::CONSOLE);
         }
         default:
+
             this->outputs.push_back(OUTPUT::FILEOUT);
             this->outputs.push_back(OUTPUT::CONSOLE);
             break;
@@ -164,11 +149,6 @@ void CommandReader::set_level() {
     }
 }
 
-CommandReader::MOVES CommandReader::get_move() {
-    return this->move;
-}
-
-std::vector <LEVEL> get_levels();
 
 std::vector <OUTPUT> CommandReader::get_outputs() {
     return this->outputs;

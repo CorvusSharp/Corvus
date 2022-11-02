@@ -7,10 +7,10 @@
 
 #include "../Field/Field.h"
 #include "../Field/FieldView.h"
-#include "../LogsInfo/Structs.h"
-#include "../LogsInfo/LogOutInfo.h"
+#include "../LOG/LogsInfo/Structs.h"
+#include "../LOG/LogsInfo/LogOutInfo.h"
 #include "../Persons/Person.h"
-#include "../Logs/LogsLvlGame.h"
+#include "../LOG/Logs/LogsLvlGame.h"
 #include "CommandReader.h"
 
 class Controller{
@@ -18,7 +18,6 @@ private:
     Person person;
     Field field;
     FieldView field_view;
-    LogOutInfo *log_out_info{};
 public:
     explicit Controller(LogOutInfo *info = nullptr);
     bool win_game();
@@ -31,8 +30,6 @@ public:
     void print_field();
     void print_stats();
 
-    LogOutInfo* get_info();
-    bool move_player(CommandReader::MOVES move);
 };
 
 

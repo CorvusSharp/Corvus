@@ -1,3 +1,4 @@
+
 //
 // Created by corvussharp on 21.09.22.
 //
@@ -25,14 +26,22 @@
 
     void Person::set_hp(int hp){
         this->health = hp;
+        Message message(GAME,"Установленно новое значение хп");
+        LOG.print(message);
 
     }
     void Person::set_dmg(int dmg){
         this->damage = dmg;
+        Message message(GAME,"Установленно новое значение дэмга");
+        LOG.print(message);
     }
     void Person::set_xp(int xpe){
         this->xp = xpe;
+        Message message(GAME,"Установленно новое значение опыта");
+        LOG.print(message);
     }
     void Person::set_lvl(int lvl) {
         this->lvl = lvl;
+        Message message(GAME,"Установленно новое значение уровня");
+        LOG.print(message);
     }

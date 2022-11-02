@@ -3,14 +3,13 @@
 //
 
 #include "Controller.h"
-#include "../Logs/LogsLvlErrors.h"
+#include "../LOG/Logs/LogsLvlErrors.h"
 
 Controller::Controller(LogOutInfo *info): field(Field(10,10)), field_view(field){
-    this->log_out_info = info;
+   // this->log_out_info = info;
     new LogsLvlGame(&this->field);
     new LogsLvlGame(&this->person);
     new LogsLvlErrors(&this->field);
-
     }
     void  Controller::set_field(int w, int h){
         field = Field(w,h);
@@ -27,6 +26,8 @@ Controller::Controller(LogOutInfo *info): field(Field(10,10)), field_view(field)
 
     bool Controller::win_game(){
         if(field.get_win()){
+            Message message(STATUS,"Game Win");
+            LOG.print(message);
             return true;
         }
         return false;
@@ -45,10 +46,6 @@ Controller::Controller(LogOutInfo *info): field(Field(10,10)), field_view(field)
         field_view = FieldView(field);
         field_view.print();
     }
-
-LogOutInfo *Controller::get_info() {
-    return this->log_out_info;
-}
 
 
 

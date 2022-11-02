@@ -7,7 +7,7 @@
      if (person) {
          person->set_hp(person->get_hp() + 5);
          Message message(GAME, "Heal event happened");
-         Logger::getInstance().print(message);
+         LOG.print(message);
          return true;
      } return false;
  }

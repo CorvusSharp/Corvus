@@ -13,7 +13,7 @@ class CommandReader : public Subject {
 public:
     void set_size();
     void check_step();
-    int arg_error();
+
 
     bool valid_arg(int a);
     void print_death();
@@ -29,17 +29,6 @@ public:
     void set_level();
     Person::STEP get_step() const;
 
-    bool set_move(LogOutInfo *info);
-
-    enum MOVES {
-        LEFT,
-        RIGHT,
-        UP,
-        DOWN,
-        NOWHERE
-    };
-
-    MOVES get_move();
 
     std::vector<LEVEL> get_levels();
 
@@ -49,7 +38,6 @@ private:
     Person::STEP step;
     int height, width;
     char sym;
-    MOVES move;
     std::vector<OUTPUT> outputs;
     std::vector<LEVEL> levels;
 };

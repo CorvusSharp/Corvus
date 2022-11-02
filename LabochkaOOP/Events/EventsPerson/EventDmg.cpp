@@ -7,7 +7,7 @@ bool EventDmg::execute(void *obj) {
     if (person) {
         person->set_dmg(person->get_dmg() + 18);
         Message message(GAME, "Dmg event happened");
-        notify(message);
+        LOG.print(message);
         return true;
     }
     return false;
