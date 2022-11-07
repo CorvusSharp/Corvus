@@ -14,7 +14,7 @@ void Subject::detach(Observer *observer) {
 }
 
 void Subject::notify(Message &massage) {
-    for (auto i:observers) {
+    for (auto i: observers) {
         i->update(massage);
     }
 }

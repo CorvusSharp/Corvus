@@ -7,7 +7,7 @@
 
 void Logger::print(Message &msg) {
     for (auto elem: outs) {
-      elem->print(msg);
+        elem->print(msg);
     }
 }
 

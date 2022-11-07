@@ -10,7 +10,7 @@ EventChangeField::EventChangeField(Field *field) {
 }
 
 bool EventChangeField::execute(void *obj) {
-    if(field) {
+    if (field) {
         field->spawn_events();
         Message message(GAME, "Change event happened");
         notify(message);

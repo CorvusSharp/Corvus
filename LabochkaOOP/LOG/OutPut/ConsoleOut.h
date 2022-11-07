@@ -6,18 +6,16 @@
 #define LABOCHKAOOP_CONSOLEOUT_H
 
 
-
 #include <string>
 #include <iostream>
 #include "Output.h"
 
 class ConsoleOut : public Output {
 public:
-    void print(Message& message) override;
+    void print(Message &message) override;
 
     ConsoleOut() = default;
 };
-
 
 
 #endif //LABOCHKAOOP_CONSOLEOUT_H

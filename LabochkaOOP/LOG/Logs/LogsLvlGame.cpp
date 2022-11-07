@@ -3,8 +3,9 @@
 //
 
 #include "LogsLvlGame.h"
+
 void LogsLvlGame::update(Message &msg) {
-    if(msg.getType() == GAME){
+    if (msg.getType() == GAME) {
         Logger::getInstance().print(msg);
     }
 }

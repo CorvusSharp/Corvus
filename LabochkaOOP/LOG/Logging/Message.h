@@ -1,10 +1,13 @@
+
 //
 // Created by corvussharp on 28.10.22.
 //
 
 #ifndef LABOCHKAOOP_MESSAGE_H
 #define LABOCHKAOOP_MESSAGE_H
+
 class LogOutInfo;
+
 #include "iostream"
 #include "../LogsInfo/Structs.h"
 #include "../LogsInfo/LogOutInfo.h"
@@ -27,8 +30,6 @@ private:
     std::string message;
     std::string pref;
 };
-
-
 
 
 #endif //LABOCHKAOOP_MESSAGE_H

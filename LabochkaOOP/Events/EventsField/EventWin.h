@@ -6,13 +6,14 @@
 #define LABOCHKAOOP_EVENTWIN_H
 
 #include "../../Field/Field.h"
+
 class Field;
 
-class EventWin: public EventField {
+class EventWin : public EventField {
 public:
     bool execute(void *obj) override;
 
-    EventWin(Field* field);
+    EventWin(Field *field);
 
 };
 

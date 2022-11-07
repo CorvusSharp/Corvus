@@ -4,4 +4,7 @@ int main() {
     Mediator med;
     med.start();
 
+/*    ControlConfig* cfg = new ControlFile("cfg.txt");
+    cfg->check_config();*/
+
 }

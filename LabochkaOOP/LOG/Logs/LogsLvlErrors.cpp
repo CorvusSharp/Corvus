@@ -5,12 +5,13 @@
 #include "LogsLvlErrors.h"
 
 void LogsLvlErrors::update(Message &msg) {
-    if(msg.getType() == ERROR){
+    if (msg.getType() == ERROR) {
         Logger::getInstance().print(msg);
     }
 }
 
-LogsLvlErrors::LogsLvlErrors(Subject *model){{
+LogsLvlErrors::LogsLvlErrors(Subject *model) {
+    {
         model->attach(this);
     }
 }

@@ -6,8 +6,10 @@
 #define UNTITLED48_EVENTFIELD_H
 
 #include "../Event.h"
+
 class Field;
-class EventField: public Event{
+
+class EventField : public Event {
 public:
     bool execute(void *obj) override = 0;
 

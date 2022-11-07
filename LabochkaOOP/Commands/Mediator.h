@@ -4,10 +4,11 @@
 
 #ifndef UNTITLED48_MEDIATOR_H
 #define UNTITLED48_MEDIATOR_H
+
 #include "CommandReader.h"
 #include "Controller.h"
 
-class Mediator{
+class Mediator {
 private:
     Person person;
     CommandReader input{};

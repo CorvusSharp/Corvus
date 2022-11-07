@@ -6,6 +6,7 @@
 #define LABOCHKAOOP_SUBJECT_H
 
 #endif //LABOCHKAOOP_SUBJECT_H
+
 #include "Observer.h"
 
 class Subject {
@@ -15,7 +16,7 @@ public:
 
     void detach(Observer *observer);
 
-    void notify(Message& message);
+    void notify(Message &message);
 
 protected:
     std::vector<Observer *> observers;

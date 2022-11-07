@@ -14,4 +14,5 @@ public:
 
     void update(Message &msg) override;
 };
+
 #endif //LABOCHKAOOP_LOGSLVLERRORS_H

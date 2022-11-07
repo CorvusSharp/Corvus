@@ -5,6 +5,6 @@
 #include "ConsoleOut.h"
 
 
-void ConsoleOut::print(Message& message) {
-    std::cout<<message;
+void ConsoleOut::print(Message &message) {
+    std::cout << message;
 };

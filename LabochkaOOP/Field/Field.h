@@ -18,7 +18,7 @@
 #include "../Events/EventsField/EventWin.h"
 #include "../Events/EventsField/EventChangeField.h"
 
-class Field: public Subject{
+class Field : public Subject {
 private:
     bool trigWin;
     Person person;
@@ -32,29 +32,29 @@ public:
     explicit Field(int width = 10, int height = 10);
 
     Field(const Field &other);
-    Field& operator=(const Field &other);
-    Field(Field&& other);
-    Field& operator=(Field&& other);
+    Field &operator=(const Field &other);
+    Field(Field &&other);
+    Field &operator=(Field &&other);
 
 
-    void change_person_pos(Person::STEP s);
-    Cell& getCell(std::pair<int, int>);
+    void change_person_pos(CONTROL s);
+    Cell &getCell(std::pair<int, int>);
 
     void callEvent(Person *person, std::pair<int, int> person_loc);
-    void update_field(  std::pair<int, int> person_loc);
+    void update_field(std::pair<int, int> person_loc);
 
     void spawn_box();
     void spawn_win();
-    void update(void* obj);
+    void update(void *obj);
 
     void make_field();
     Person get_person() const;
 
     void trig_win();
-    bool get_win()const;
+    bool get_win() const;
 
     bool level_check_passab();
-    void  spawn_events();
+    void spawn_events();
 
     bool check_box_win();
 
@@ -63,7 +63,7 @@ public:
     void spawn_new_events();
 
     std::vector<std::vector<Cell>> get_field() const;
-   // ~Field();
+    // ~Field();
 
 };
 

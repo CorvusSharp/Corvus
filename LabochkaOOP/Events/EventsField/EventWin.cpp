@@ -5,10 +5,6 @@
 #include "EventWin.h"
 
 
-
-
-
-
 EventWin::EventWin(Field *field) {
     this->field = field;
 }

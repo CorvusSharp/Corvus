@@ -4,15 +4,17 @@
 
 #ifndef UNTITLED48_FIELDVIEW_H
 #define UNTITLED48_FIELDVIEW_H
+
 #include "Field.h"
 #include "iostream"
 #include "../Cell/CellView.h"
-class FieldView{
+
+class FieldView {
 private:
     Field field;
 
 public:
-    explicit FieldView(Field& other);
+    explicit FieldView(Field &other);
     void print() const;
     void print_bord() const;
 };

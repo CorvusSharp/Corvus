@@ -12,5 +12,9 @@ enum LEVEL {
 enum OUTPUT {
     CONSOLE, FILEOUT
 };
+enum CONTROL {
+
+    UP, DOWN, LEFT, RIGHT, EXIT, NOTHING
+};
 
 #endif //LABOCHKAOOP_STRUCTS_H

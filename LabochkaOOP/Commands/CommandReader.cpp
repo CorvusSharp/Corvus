@@ -1,105 +1,80 @@
-//
-// Created by corvussharp on 21.09.22.
-//
 
+#include "memory"
 #include "CommandReader.h"
 
-    void CommandReader::set_size() {
-        while (true) {
-            std::cout << "Введите Высоту:";
-            std::cin >> height;
-            std::cout << "Введите ширину:";
-            std::cin >> width;
-            if (valid_arg(height) && valid_arg(width)) {
-                Message message(GAME, "Height: " + std::to_string(height) + "Width: " + std::to_string(width));
-                LOG.print(message);
-                break;
-            }
+void CommandReader::set_size() {
+    while (true) {
+        std::cout << "Введите Высоту:";
+        std::cin >> height;
+        std::cout << "Введите ширину:";
+        std::cin >> width;
+        if (valid_arg(height) && valid_arg(width)) {
+            Message message(GAME, "Height: " + std::to_string(height) + "Width: " + std::to_string(width));
+            LOG.print(message);
+            break;
         }
     }
-    char CommandReader::field_choice(){
-        std::cout << "Хотите ли вы изменить размеры поля?\n Если нет Введите 'X' : ";
-        std::cin>>sym;
-        return sym;
-    }
+}
 
-    bool CommandReader::valid_arg(int a){
-        if (a<=0){
-            return false;
-        }
-        return true;
-    }
-    void CommandReader::check_step(){
+char CommandReader::field_choice() {
+    std::cout << "Хотите ли вы изменить размеры поля?\n Если нет Введите 'X' : ";
+    std::cin >> sym;
+    return sym;
+}
 
-        std::cout<<"Команды :\n\t\tw - движение вперед\n\t\ts - движение вниз\n\t\t"
-                   "d - движение вправо\n\t\ta - движение влево\n\t\te - выйти из игры"<<std::endl;
-        std::cout<<" Введите команду: ";
-        input_sym(sym);
-        switch (sym) {
-            case 'w': {
-                step = Person::UP;
-                Message message(GAME, "Пользователь ввел команду: w");
-                LOG.print(message);
-                break;
-            }
-            case 's': {
-                step = Person::DOWN;
-                Message message(GAME, "Пользователь ввел команду: s" );
-                LOG.print(message);
-                break;
-            }
-                case 'd': {
-                    step = Person::RIGHT;
-                    Message message(GAME, "Пользователь ввел команду: d");
-                    LOG.print(message);
-                    break;
-                }
-            case 'a': {
-                step = Person::LEFT;
-                Message message(GAME, "Пользователь ввел команду: a");
-                LOG.print(message);
-                break;
-            }
-            case 'e': {
-                step = Person::EXIT;
-                Message message(GAME, "Пользователь ввел команду: e");
-                LOG.print(message);
-                break;
-            }
-            default:
-                step = Person::NOTHING;
-                Message message(ERROR,"Вы ввели не правильную команду");
-                LOG.print(message);
-                break;
-        }
+bool CommandReader::valid_arg(int a) {
+    if (a <= 0) {
+        return false;
     }
+    return true;
+}
 
-    int CommandReader::get_height() const{
-        return height;
-    }
+CONTROL CommandReader::check_step() {
+    char key;
+    std::cout << "Команды :\n\t\tw - движение вперед\n\t\ts - движение вниз\n\t\t"
+                 "d - движение вправо\n\t\ta - движение влево\n\t\te - выйти из игры" << std::endl;
+    std::cout << " Введите команду: ";
+    std::cin >> key;
+    return step = control_config->get_key(key);
 
-    void CommandReader::print_death(){
-        Message message(GAME, "Персонаж умер");
-        LOG.print(message);
-    }
+}
 
-    int CommandReader::get_width()const{
-        return width;
-    }
-    char CommandReader::input_sym(char &sym){
-        std::cin>>sym;
-        return sym;
-    }
-    void CommandReader::print_win(){
-        std::cerr<<"ПобедОчка";
-    }
-    char CommandReader::get_sym()const{
-        return sym;
-    }
-    Person::STEP CommandReader::get_step() const{
-        return step;
-    }
+void CommandReader::set_config(ControlConfig *config) {
+    control_config = config;
+}
 
+int CommandReader::get_height() const {
+    return height;
+}
+
+void CommandReader::print_death() {
+    Message message(GAME, "Персонаж умер");
+    LOG.print(message);
+}
+
+void CommandReader::print_win() {
+    std::cerr << "ПобедОчка";
+}
+
+std::vector<OUTPUT> CommandReader::get_outputs() {
+    return this->outputs;
+}
+
+std::vector<LEVEL> CommandReader::get_levels() {
+    return this->levels;
+}
+
+char CommandReader::get_sym() const {
+    return sym;
+}
+
+CONTROL CommandReader::get_step() const {
+    return step;
+}
+
+int CommandReader::get_width() const {
+    return width;
+}
 
 
 void CommandReader::set_output() {
@@ -150,11 +125,7 @@ void CommandReader::set_level() {
 }
 
 
-std::vector <OUTPUT> CommandReader::get_outputs() {
-    return this->outputs;
-}
-
-std::vector <LEVEL> CommandReader::get_levels() {
-    return this->levels;
+CommandReader::CommandReader() {
+    control_config = new ControlFile("cfg.txt");
 }
 

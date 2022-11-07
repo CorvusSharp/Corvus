@@ -19,13 +19,14 @@ private:
     Field field;
     FieldView field_view;
 public:
-    explicit Controller(LogOutInfo *info = nullptr);
+    explicit Controller();
+
     bool win_game();
     bool death_person();
 
     void set_field(int w, int h);
     void set_field_base();
-    void set_step(Person::STEP step);
+    void set_step(CONTROL step);
 
     void print_field();
     void print_stats();

@@ -4,13 +4,15 @@
 
 #ifndef LABOCHKAOOP_OBSERVER_H
 #define LABOCHKAOOP_OBSERVER_H
+
 #include "vector"
 #include "../Logging/Message.h"
 #include "../Logging/Logger.h"
+
 class Observer {
 public:
 
-    virtual void update(Message& message) = 0;
+    virtual void update(Message &message) = 0;
     virtual ~Observer() = default;
 };
 
