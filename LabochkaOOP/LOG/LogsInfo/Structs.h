@@ -13,7 +13,6 @@ enum OUTPUT {
     CONSOLE, FILEOUT
 };
 enum CONTROL {
-
     UP, DOWN, LEFT, RIGHT, EXIT, NOTHING
 };
 

@@ -5,6 +5,6 @@ int main() {
     med.start();
 
 /*    ControlConfig* cfg = new ControlFile("cfg.txt");
-    cfg->check_config();*/
+    cfg->check_fix_config();*/
 
 }

@@ -245,8 +245,6 @@ void Field::change_person_pos(CONTROL s) {
         update_field(person_loc);
     }
     field.at(person_loc.second).at(person_loc.first).set_person_in(true);
-    //Message message(GAME, "You do step", info);
-    //notify(message);
 }
 
 

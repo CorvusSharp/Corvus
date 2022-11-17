@@ -12,9 +12,27 @@ public:
 
     explicit ControlFile(const std::string &);
     void read_config() override;
+    CONTROL get_key(char key) override;
+    void check_fix_config() override;
     ~ControlFile();
 private:
     std::ifstream config;
+protected:
+    std::map<CONTROL, char> empty_config = {
+            {CONTROL::UP,    '\0'},
+            {CONTROL::DOWN,  '\0'},
+            {CONTROL::LEFT,  '\0'},
+            {CONTROL::RIGHT, '\0'},
+            {CONTROL::EXIT,  '\0'}
+    };
+    std::map<CONTROL, char> default_config = {
+            {CONTROL::UP,    'w'},
+            {CONTROL::DOWN,  's'},
+            {CONTROL::LEFT,  'a'},
+            {CONTROL::RIGHT, 'd'},
+            {CONTROL::EXIT,  'e'}
+
+    };
 };
 
 #endif //LABOCHKAOOP_CONTROLFILE_H

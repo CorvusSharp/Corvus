@@ -1,4 +1,6 @@
-
+#include<cstdio>
+#include <termios.h>
+#include <unistd.h>
 #include "memory"
 #include "CommandReader.h"
 
@@ -15,7 +17,6 @@ void CommandReader::set_size() {
         }
     }
 }
-
 char CommandReader::field_choice() {
     std::cout << "Хотите ли вы изменить размеры поля?\n Если нет Введите 'X' : ";
     std::cin >> sym;
@@ -28,20 +29,25 @@ bool CommandReader::valid_arg(int a) {
     }
     return true;
 }
-
+//////////////////////////////////////////////////
 CONTROL CommandReader::check_step() {
     char key;
     std::cout << "Команды :\n\t\tw - движение вперед\n\t\ts - движение вниз\n\t\t"
                  "d - движение вправо\n\t\ta - движение влево\n\t\te - выйти из игры" << std::endl;
     std::cout << " Введите команду: ";
     std::cin >> key;
-    return step = control_config->get_key(key);
-
+    step = control_config->get_key(key);
+    return step;
 }
-
 void CommandReader::set_config(ControlConfig *config) {
     control_config = config;
 }
+
+CommandReader::CommandReader() {
+    control_config = new ControlFile("cfg.txt");
+}
+
+///////////////////////////////////////////////////
 
 int CommandReader::get_height() const {
     return height;
@@ -72,6 +78,7 @@ CONTROL CommandReader::get_step() const {
     return step;
 }
 
+
 int CommandReader::get_width() const {
     return width;
 }
@@ -89,9 +96,12 @@ void CommandReader::set_output() {
             break;
         case '1': {
             this->outputs.push_back(OUTPUT::CONSOLE);
+            break;
+        }
+        case '3':{
+            break;
         }
         default:
-
             this->outputs.push_back(OUTPUT::FILEOUT);
             this->outputs.push_back(OUTPUT::CONSOLE);
             break;
@@ -102,9 +112,10 @@ void CommandReader::set_output() {
 void CommandReader::set_level() {
     char res;
     std::cout << "Logging level: \n";
-    std::cout << "0 - Game\n";
-    std::cout << "1 - Status\n";
-    std::cout << "2 - Errors\n";
+    std::cout << "0 - Logging game\n";
+    std::cout << "1 - Logging Status\n";
+    std::cout << "2 - Logging Errors\n";
+    std::cout<<" any - Nothing\n";
     std::cin >> res;
     switch (res) {
         case '0':
@@ -113,19 +124,16 @@ void CommandReader::set_level() {
         case '1': {
             this->levels.push_back(LEVEL::GAME);
             this->levels.push_back(LEVEL::STATUS);
-        }
             break;
+        }
         case '2': {
             this->levels.push_back(LEVEL::GAME);
             this->levels.push_back(LEVEL::STATUS);
             this->levels.push_back(LEVEL::ERROR);
+            break;
         }
+        default:
             break;
     }
-}
-
-
-CommandReader::CommandReader() {
-    control_config = new ControlFile("cfg.txt");
 }
 

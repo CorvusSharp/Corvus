@@ -11,27 +11,13 @@
 #include "sstream"
 #include "vector"
 
+
 class ControlConfig {
 public:
     virtual void read_config() = 0;
-    CONTROL get_key(char move);
-    void check_config();
-protected:
-    std::map<CONTROL, char> empty_config = {
-            {CONTROL::UP,    '\0'},
-            {CONTROL::DOWN,  '\0'},
-            {CONTROL::LEFT,  '\0'},
-            {CONTROL::RIGHT, '\0'},
-            {CONTROL::EXIT,  '\0'}
-    };
-    std::map<CONTROL, char> default_config = {
-            {CONTROL::UP,    'w'},
-            {CONTROL::DOWN,  's'},
-            {CONTROL::LEFT,  'a'},
-            {CONTROL::RIGHT, 'd'},
-            {CONTROL::EXIT,  'e'}
+    virtual CONTROL get_key(char key) = 0;
+    virtual void check_fix_config() = 0;
 
-    };
 };
 
 #endif //LABOCHKAOOP_CONTROLCONFIG_H

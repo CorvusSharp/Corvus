@@ -199,11 +199,11 @@ build CMakeFiles/LabochkaOOP.dir/INPUT/ControlFile.cpp.o: CXX_COMPILER__Labochka
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
   OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/INPUT
 
-build CMakeFiles/LabochkaOOP.dir/INPUT/ControlConfig.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/INPUT/ControlConfig.cpp || cmake_object_order_depends_target_LabochkaOOP
-  DEP_FILE = CMakeFiles/LabochkaOOP.dir/INPUT/ControlConfig.cpp.o.d
+build CMakeFiles/LabochkaOOP.dir/GemLvL.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/GemLvL.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/GemLvL.cpp.o.d
   FLAGS = -g -std=gnu++2a
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
-  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/INPUT
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir
 
 
 # =============================================================================
@@ -213,7 +213,7 @@ build CMakeFiles/LabochkaOOP.dir/INPUT/ControlConfig.cpp.o: CXX_COMPILER__Laboch
 #############################################
 # Link the executable LabochkaOOP
 
-build LabochkaOOP: CXX_EXECUTABLE_LINKER__LabochkaOOP_Debug CMakeFiles/LabochkaOOP.dir/main.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventXp.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventHp.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventDmg.cpp.o CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventWin.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventChangeField.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventTrap.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/LogsInfo/LogOutInfo.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logging/Logger.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logging/Message.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logs/LogsLvlErrors.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logs/LogsLvlGame.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logs/LogsStatus.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/OutPut/FileOut.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/OutPut/ConsoleOut.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logs/Subject.cpp.o CMakeFiles/LabochkaOOP.dir/INPUT/ControlFile.cpp.o CMakeFiles/LabochkaOOP.dir/INPUT/ControlConfig.cpp.o
+build LabochkaOOP: CXX_EXECUTABLE_LINKER__LabochkaOOP_Debug CMakeFiles/LabochkaOOP.dir/main.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventXp.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventHp.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventDmg.cpp.o CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventWin.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventChangeField.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventTrap.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/LogsInfo/LogOutInfo.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logging/Logger.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logging/Message.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logs/LogsLvlErrors.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logs/LogsLvlGame.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logs/LogsStatus.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/OutPut/FileOut.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/OutPut/ConsoleOut.cpp.o CMakeFiles/LabochkaOOP.dir/LOG/Logs/Subject.cpp.o CMakeFiles/LabochkaOOP.dir/INPUT/ControlFile.cpp.o CMakeFiles/LabochkaOOP.dir/GemLvL.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
   POST_BUILD = :
