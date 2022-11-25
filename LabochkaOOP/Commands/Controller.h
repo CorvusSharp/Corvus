@@ -11,7 +11,7 @@
 #include "../LOG/LogsInfo/LogOutInfo.h"
 #include "../Persons/Person.h"
 #include "../LOG/Logs/LogsLvlGame.h"
-#include "CommandReader.h"
+
 
 class Controller{
 private:

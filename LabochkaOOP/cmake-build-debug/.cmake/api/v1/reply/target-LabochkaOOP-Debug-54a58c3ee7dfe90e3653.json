@@ -63,21 +63,22 @@
 				16,
 				18,
 				20,
-				22,
+				24,
 				26,
 				28,
-				30,
-				33,
-				36,
-				39,
+				31,
+				34,
+				37,
+				38,
 				40,
 				42,
-				44,
-				48,
+				46,
+				47,
 				49,
-				51,
-				52,
-				55
+				50,
+				54,
+				56,
+				58
 			]
 		}
 	],
@@ -121,21 +122,22 @@
 				16,
 				18,
 				20,
-				22,
+				24,
 				26,
 				28,
-				30,
-				33,
-				36,
-				39,
+				31,
+				34,
+				37,
+				38,
 				40,
 				42,
-				44,
-				48,
+				46,
+				47,
 				49,
-				51,
-				52,
-				55
+				50,
+				54,
+				56,
+				58
 			]
 		},
 		{
@@ -153,26 +155,28 @@
 				17,
 				19,
 				21,
+				22,
 				23,
-				24,
 				25,
 				27,
 				29,
-				31,
+				30,
 				32,
-				34,
+				33,
 				35,
-				37,
-				38,
+				36,
+				39,
 				41,
 				43,
+				44,
 				45,
-				46,
-				47,
-				50,
+				48,
+				51,
+				52,
 				53,
-				54,
-				56
+				55,
+				57,
+				59
 			]
 		}
 	],
@@ -275,17 +279,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "Field/FieldView.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Commands/CommandReader.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Commands/CommandReader.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -480,13 +473,40 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Commands/CommandRead.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "GemLvL.cpp",
+			"path" : "Commands/GameSettings.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "GemLvL.h",
+			"path" : "Commands/GameSettings.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Commands/ConsoleReader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Commands/ConsoleReader.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Commands/ConsoleGameSetings.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Commands/ConsoleGameSetings.h",
 			"sourceGroupIndex" : 1
 		}
 	],

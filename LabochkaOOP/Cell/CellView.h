@@ -16,9 +16,9 @@ class EventFieldChange;
 class CellView{
 public:
     explicit CellView(const Cell& sym);
-     char get_cell()const;
+     std::string get_cell()const;
 private:
-    char sym_cell;
+    std::string sym_cell;
 };
 
 

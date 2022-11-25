@@ -4,6 +4,7 @@
 
 #include "Controller.h"
 #include "../LOG/Logs/LogsLvlErrors.h"
+#include "../INPUT/ControlConfig.h"
 
 Controller::Controller() : field(Field(10, 10)), field_view(field) {
 

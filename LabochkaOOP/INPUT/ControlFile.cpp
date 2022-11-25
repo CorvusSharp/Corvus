@@ -17,17 +17,20 @@ ControlFile::ControlFile(const std::string &file_name) {
 }
 
 void ControlFile::check_fix_config() {
-    std::vector<char> list_char;
+    std::vector<char> usedChar;
+    std::vector<std::string> usedControl;
+    std::string tmpStr;
+
     for (auto elem: empty_config) {
         if (elem.second == '\0') {
             empty_config = default_config;
             return;
         }
-        list_char.push_back(elem.second);
+        usedChar.push_back(elem.second);
     }
-    for (int i = 0; i < (list_char.size() - 1); i++) {
-        for (int j = i + 1; j < list_char.size(); j++) {
-            if (list_char[i] == list_char[j]) {
+    for (int i = 0; i < (usedChar.size() - 1); i++) {
+        for (int j = i + 1; j < usedChar.size(); j++) {
+            if (usedChar[i] == usedChar[j]) {
                 empty_config = default_config;
                 return;
             }
@@ -48,48 +51,29 @@ void ControlFile::read_config() {
         empty_config = default_config;
         return;
     }
+    std::vector<std::string> usedControl;
+
     std::string tmpStr;
     while (getline(config, tmpStr)) {
         std::string cmd;
         char symControl = '\0';
         std::istringstream stream(tmpStr);
         stream >> cmd >> symControl;
-        if (cmd == "UP=") {
-            empty_config[UP] = symControl;
-            std::string tmpMes = "Управление вверх установлено на ";
-            Message message(STATUS, tmpMes + symControl);
-            LOG.print(message);
-        }
-        if (cmd == "DOWN=") {
-            empty_config[DOWN] = symControl;
-            std::string tmpMes = "Управление вниз установлено на ";
-            Message message(STATUS, tmpMes + symControl);
-            LOG.print(message);
-        }
-        if (cmd == "LEFT=") {
-            empty_config[LEFT] = symControl;
-            std::string tmpMes = "Управление влево установлено на ";
-            Message message(STATUS, tmpMes + symControl);
-            LOG.print(message);
-        }
-        if (cmd == "RIGHT=") {
-            empty_config[RIGHT] = symControl;
-            std::string tmpMes = "Управление вправо установлено на ";
-            Message message(STATUS, tmpMes + symControl);
-           LOG.print(message);
-        }
-        if (cmd == "EXIT=") {
-            empty_config[EXIT] = symControl;
-            std::string tmpMes = "Выход установлен на ";
-            Message message(STATUS, tmpMes + symControl);
-            ///LOG.print(message);
-        }
-        if (cmd == "NOTHING=") {
-            empty_config[NOTHING] = symControl;
+        usedControl.push_back(cmd);
+        for (const auto &key: commands) {
+            if (cmd == key.first) {
+                empty_config[key.second] = symControl;
+            }
         }
     }
-    check_fix_config();
+    for (int i = 0; i < usedControl.size(); ++i) {
+        for (int j = 0; j < usedControl.size(); ++j) {
+            if (i != j && usedControl.at(i) == usedControl.at(j)) {
+                empty_config = default_config;
+                break;
+            }
+            check_fix_config();
+        }
+
+    }
 }
-
-
-

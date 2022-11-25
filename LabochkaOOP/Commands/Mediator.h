@@ -5,14 +5,17 @@
 #ifndef UNTITLED48_MEDIATOR_H
 #define UNTITLED48_MEDIATOR_H
 
-#include "CommandReader.h"
 #include "Controller.h"
-
+#include "../Commands/ConsoleGameSetings.h"
+#include "../Commands/ConsoleReader.h"
+#include "../Commands/GameSettings.h"
 class Mediator {
 private:
     Person person;
-    CommandReader input{};
+    GameSettings *game;
     Controller play;
+    ConsoleGameSetings input;
+    ConsoleReader cread;
 public:
     void start();
 
