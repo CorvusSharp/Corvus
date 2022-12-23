@@ -7,6 +7,8 @@
 #define UNTITLED48_FIELD_H
 
 
+#include <functional>
+#include <map>
 #include "../Cell/Cell.h"
 #include "random"
 
@@ -21,12 +23,30 @@
 class Field : public Subject {
 private:
     bool trigWin;
-    Person person;
+    Person* person;
     std::vector<std::vector<Cell>> field;
     int height;
     int width;
     std::pair<int, int> person_loc;
+    void saveGame();
 
+    std::map<size_t, std::string> eventToString = {
+            {typeid(EventTrap).hash_code(), "EventTrap"},
+            {typeid(EventXp).hash_code(), "EventXp"},
+            {typeid(EventDmg).hash_code(), "EventDmg"},
+            {typeid(EventChangeField).hash_code(), "EventChangeField"},
+            {typeid(EventWin).hash_code(), "EventWin"},
+            {typeid(EventHp).hash_code(), "EventHp"}
+    };
+    std::map<std::string, std::function<Event*()>> stringToEvent = {
+            {"EventTrap", [this](){return new EventTrap(person);}},
+            {"EventHp", [this](){return new EventHp(person);}},
+            {"EventWin", [this](){return new EventWin(this);}},
+            {"EventChangeField", [this](){return new EventChangeField(this);}},
+            {"EventDmg", [this](){return new EventDmg(person);}},
+            {"EventXp", [this](){return new EventXp(person);}}
+    };
+    std::tuple<int, int, std::pair<int, int>, std::vector<std::vector<Cell>>> restoredData;
 public:
     void swap(Field &other);
     explicit Field(int width = 10, int height = 10);
@@ -61,9 +81,14 @@ public:
     int get_height() const;
     int get_width() const;
     void spawn_new_events();
+    std::string getState();
 
     std::vector<std::vector<Cell>> get_field() const;
-    // ~Field();
+    void setState(std::string);
+    size_t hash(int, int, std::pair<int, int>, std::vector<std::vector<Cell>>);
+    void restoreState();
+    void restoreGame();
+    void playerPos(int x, int y);
 
 };
 

@@ -5,16 +5,16 @@
 #ifndef LABOCHKAOOP_EVENTWIN_H
 #define LABOCHKAOOP_EVENTWIN_H
 
-#include "../../Field/Field.h"
-
 class Field;
+#include "EventField.h"
 
 class EventWin : public EventField {
+    size_t hash;
 public:
     bool execute(void *obj) override;
 
     EventWin(Field *field);
-
+    size_t getHash() final;
 };
 
 

@@ -9,9 +9,10 @@
 
 
 class EventHp: public EventPerson{
+    size_t hash;
 public:
     bool execute(void *obj) override;
-
+    size_t getHash() final;
     explicit EventHp(Person* person);
 
 };

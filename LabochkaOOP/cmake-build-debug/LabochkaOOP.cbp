@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="LabochkaOOP"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LabochkaOOP">
+				<Option output="/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/LabochkaOOP" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 LabochkaOOP"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LabochkaOOP/fast">
+				<Option output="/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/LabochkaOOP" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 LabochkaOOP/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Cell/Cell.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Cell/Cell.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Cell/CellView.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Cell/CellView.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/CommandRead.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/ConsoleGameSetings.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/ConsoleGameSetings.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/ConsoleReader.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/ConsoleReader.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/Controller.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/Controller.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/GameSettings.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/GameSettings.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/Mediator.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Commands/Mediator.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/Event.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsField/EventChangeField.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsField/EventChangeField.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsField/EventField.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsField/EventWin.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsField/EventWin.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventDmg.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventDmg.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventHp.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventHp.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventPerson.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventTrap.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventTrap.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventXp.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Events/EventsPerson/EventXp.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/GameException.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/GameException.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/InvalidDataException.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/InvalidDataException.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/OpenFileException.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/OpenFileException.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/RestoreStateException.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/RestoreStateException.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/SaveStateException.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Exceptions/SaveStateException.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Field/Field.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Field/Field.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Field/FieldView.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Field/FieldView.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/INPUT/ControlConfig.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/INPUT/ControlFile.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/INPUT/ControlFile.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logging/Logger.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logging/Logger.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logging/Message.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logging/Message.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/LogsLvlErrors.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/LogsLvlErrors.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/LogsLvlGame.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/LogsLvlGame.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/LogsStatus.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/LogsStatus.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/Observer.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/Subject.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/Logs/Subject.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/LogsInfo/LogOutInfo.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/LogsInfo/LogOutInfo.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/LogsInfo/Structs.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/OutPut/ConsoleOut.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/OutPut/ConsoleOut.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/OutPut/FileOut.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/OutPut/FileOut.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/LOG/OutPut/Output.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Persons/Person.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/Persons/Person.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/main.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/save/Memento.cpp">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/save/Memento.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/save/Originator.h">
+			<Option target="LabochkaOOP"/>
+		</Unit>
+		<Unit filename="/home/corvussharp/CLionProjects/LabochkaOOP/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -15,6 +15,11 @@ bool EventDmg::execute(void *obj) {
 
 EventDmg::EventDmg(Person *person) {
     this->person = person;
+    hash = typeid(EventDmg).hash_code();
+}
+
+size_t EventDmg::getHash() {
+    return hash;
 }
 
 

@@ -14,5 +14,11 @@
 
 EventTrap::EventTrap(Person *person) {
     this->person = person;
+    hash = typeid(EventTrap).hash_code();
+
+}
+
+size_t EventTrap::getHash() {
+    return hash;
 }
 

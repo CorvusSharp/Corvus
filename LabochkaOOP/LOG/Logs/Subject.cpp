@@ -6,7 +6,7 @@
 
 
 void Subject::attach(Observer *observer) {
-    observers.push_back(observer);
+    //observers.push_back(observer);
 }
 
 void Subject::detach(Observer *observer) {

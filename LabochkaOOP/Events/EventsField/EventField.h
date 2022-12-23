@@ -5,9 +5,9 @@
 #ifndef UNTITLED48_EVENTFIELD_H
 #define UNTITLED48_EVENTFIELD_H
 
-#include "../Event.h"
-
 class Field;
+
+#include "../Event.h"
 
 class EventField : public Event {
 public:

@@ -19,6 +19,12 @@ bool EventXp::execute(void *obj) {
 
 EventXp::EventXp(Person *person) {
     this->person = person;
+    hash = typeid(EventXp).hash_code();
+
+}
+
+size_t EventXp::getHash() {
+    return hash;
 }
 
 

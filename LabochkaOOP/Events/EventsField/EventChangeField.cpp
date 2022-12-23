@@ -4,9 +4,12 @@
 
 #include "EventChangeField.h"
 
+#include "../../Field/Field.h"
 
 EventChangeField::EventChangeField(Field *field) {
     this->field = field;
+    hash = typeid(EventChangeField).hash_code();
+
 }
 
 bool EventChangeField::execute(void *obj) {
@@ -17,4 +20,8 @@ bool EventChangeField::execute(void *obj) {
         return true;
     }
     return false;
+}
+
+size_t EventChangeField::getHash() {
+    return hash;
 }

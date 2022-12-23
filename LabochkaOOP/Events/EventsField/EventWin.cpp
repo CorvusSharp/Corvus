@@ -3,10 +3,13 @@
 //
 
 #include "EventWin.h"
+#include "../../Field/Field.h"
 
 
 EventWin::EventWin(Field *field) {
     this->field = field;
+    hash = typeid(EventWin).hash_code();
+
 }
 
 bool EventWin::execute(void *obj) {
@@ -17,5 +20,9 @@ bool EventWin::execute(void *obj) {
         return true;
     }
     return false;
+}
+
+size_t EventWin::getHash() {
+    return hash;
 }
 

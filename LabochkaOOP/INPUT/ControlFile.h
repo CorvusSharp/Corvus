@@ -22,14 +22,18 @@ private:
             {CONTROL::DOWN,  '\0'},
             {CONTROL::LEFT,  '\0'},
             {CONTROL::RIGHT, '\0'},
-            {CONTROL::EXIT,  '\0'}
+            {CONTROL::EXIT,  '\0'},
+            {CONTROL::SAVE, '\0'},
+            {CONTROL::LOAD, '\0'}
     };
     std::map<CONTROL, char> default_config = {
             {CONTROL::UP,    'w'},
             {CONTROL::DOWN,  's'},
             {CONTROL::LEFT,  'a'},
             {CONTROL::RIGHT, 'd'},
-            {CONTROL::EXIT,  'e'}
+            {CONTROL::EXIT,  'e'},
+            {CONTROL::SAVE, 'p'},
+            {CONTROL::LOAD, 'l'}
 
     };
     std::map<std::string, CONTROL> commands = {
@@ -37,7 +41,10 @@ private:
             {"DOWN=", DOWN},
             {"RIGHT=",RIGHT},
             {"LEFT=", LEFT},
-            {"EXIT=", EXIT}
+            {"EXIT=", EXIT},
+            {"SAVE",SAVE},
+            {"LOAD",LOAD}
+
     };
 
 };

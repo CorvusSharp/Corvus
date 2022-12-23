@@ -483,3 +483,8 @@
 [GAME] Dmg event happened
 [STATUS] Game Win
 [GAME] Height: 27Width: 26
+[GAME] Установленно новое значение опыта
+[GAME] XP event happened
+[GAME] Height: 10Width: 10
+[GAME] Height: 10Width: 10
+[GAME] Height: 10Width: 10

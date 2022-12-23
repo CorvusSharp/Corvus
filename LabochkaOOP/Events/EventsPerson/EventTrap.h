@@ -8,11 +8,11 @@
 
 #include "EventPerson.h"
 class EventTrap: public EventPerson{
-
+    size_t hash;
 public:
     EventTrap(Person* person);
     bool execute(void *obj) override;
-
+    size_t getHash() final;
 };
 
 

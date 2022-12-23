@@ -6,7 +6,8 @@
 #define UNTITLED48_PERSON_H
 
 #include "../LOG/Logs/Subject.h"
-
+#define TOTALVAL 3
+#include "../Exceptions/InvalidDataException.h"
 class Person : public Subject {
 public:
 
@@ -22,9 +23,13 @@ public:
     void set_lvl(int lvl);
     void set_xp(int xpe);
 
+    std::string getState();
+    void setState(std::string);
+    void restoreState();
+    size_t hash(int xp, int health, int dmg,int lvl);
 private:
     int health, xp, damage, lvl;
-
+    std::vector<int> restoredData;
 };
 
 #endif //UNTITLED48_PERSON_H

@@ -14,4 +14,9 @@
 
 EventHp::EventHp(Person *person) {
     this->person = person;
+    hash = typeid(EventHp).hash_code();
+}
+
+size_t EventHp::getHash() {
+    return hash;
 }

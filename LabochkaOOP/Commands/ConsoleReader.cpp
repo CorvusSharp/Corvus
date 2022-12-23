@@ -28,3 +28,11 @@ char ConsoleReader::field_choice() {
     return sym;
 }
 
+CONTROL ConsoleReader::get_step() {
+    return step;
+}
+
+char ConsoleReader::get_sym() {
+    return sym;
+}
+

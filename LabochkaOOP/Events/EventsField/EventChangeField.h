@@ -7,13 +7,13 @@
 
 class Field;
 
-#include "../../Field/Field.h"
 #include "EventField.h"
 
 class EventChangeField : public EventField {
+    size_t hash;
 public:
     bool execute(void *obj) override;
-
+    size_t getHash() final;
     explicit EventChangeField(Field *field);
 };
 
