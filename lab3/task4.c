@@ -1,48 +1,40 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/wait.h>
+#include <sys/resource.h>
+#include <sys/types.h>
 #include <sched.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-int main() {
-pid_t pid;
-int i;
-pid = fork(); // создаем процесс-потомок
-if (pid == -1) {
-perror("ошибка fork");
-exit(EXIT_FAILURE);
-} else if (pid == 0) {
-// код процесса-потомока
-printf("Дочерний процесс %d запущен.\n", getpid());
-for (i = 0; i < 10; i++) {
-printf("Дочерний процесс %d выполняет итерацию %d.\n", getpid(), i);
-sleep(1); // замедляем выполнение цикла на 1 секунду
+void main(int argc, char* argv[])
+{
+int n = 0;
+struct sched_param shdprm;
+shdprm.sched_priority = 1;
+if (sched_setscheduler(0, SCHED_RR, &shdprm) == -1) {
+perror("SCHED_SETSCHEDULER");
 }
-exit(EXIT_SUCCESS);
-} else {
-// код родительского процесса
-printf("Родительский процесс %d запущен.\n", getpid());
-struct sched_param params;
-params.sched_priority = 0;
-    // Round Robin
-    sched_setscheduler(0, SCHED_RR, &params);
-    printf("Родительский процесс %d использует алгоритм Round Robin.\n", getpid());
-   
- system("ps -xf");
-    sleep(5);
-printf("Родительский процесс %d использует алгоритм RR.\n", getpid());
-    // FIFO
-    sched_setscheduler(0, SCHED_FIFO, &params);
-    printf("Родительский процесс %d использует алгоритм FIFO.\n", getpid());
 char command_fifo[100];
 sprintf(command_fifo, "chrt -p %d", getpid());
 system(command_fifo);
-sleep(5);
- system("ps -xf");
-    sleep(5);
-    wait(NULL); // ожидаем завершения процесса-потомока
-    printf("Родительский процесс %d завершен.\n", getpid());
-    exit(EXIT_SUCCESS);
+int pid = fork();
+if(pid == -1)
+{
+perror("fork error");
+exit(1);
 }
-
+for(int i=0; i < 10; i++)
+{
+if (pid == 0)
+{
+printf("SON: new pid = %d, ppid = %d \nValue n: %d\n", getpid(), getppid(), n);
+n += 1;
+}
+else
+{
+printf("PARENT: pid = %d, ppid = %d \nValue n: %d\n", getpid(), getppid(), n);
+n -= 1;
+}
+}
+printf("Программа завершена\n");
+exit(1);
 }
