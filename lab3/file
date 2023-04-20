@@ -4,7 +4,9 @@
     8 ?        Ss     0:00 /init
     9 ?        S      0:00  \_ /init
    10 pts/0    Ss     0:00      \_ -bash
-  190 pts/0    S+     0:00          \_ ./father
-  191 pts/0    S+     0:00              \_ son
-  192 pts/0    S+     0:00              \_ sh -c ps -xf --forest > file
-  193 pts/0    R+     0:00                  \_ ps -xf --forest
+   53 pts/0    S      0:00          \_ su
+   54 pts/0    S      0:00              \_ bash
+  134 pts/0    S+     0:00                  \_ ./father
+  135 pts/0    S+     0:00                      \_ son
+  136 pts/0    S+     0:00                      \_ sh -c ps -xf --forest > file
+  137 pts/0    R+     0:00                          \_ ps -xf --forest

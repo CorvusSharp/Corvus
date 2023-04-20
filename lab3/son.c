@@ -1,9 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
+
 int main() {
-    printf("Вы находитесь в процессе-потомке\n");
-	sleep(5);
+    printf("Запущен дочерний процесс с PID: %d\n", getpid());
+
+    // Здесь может быть выполнена какая-либо задача
+    sleep(5);
+
+    printf("Дочерний процесс завершается\n");
     return 0;
 }
 

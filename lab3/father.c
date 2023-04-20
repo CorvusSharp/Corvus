@@ -1,22 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/types.h>
 #include <sys/wait.h>
 
 int main() {
-    int pid = fork();
-    if (pid < 0) {
-        fprintf(stderr, "Ошибка при создании процесса-потомка\n");
-        exit(1);
-    } else if (pid == 0) {
-	printf("Дочерний процесс с PID: %d\n",getpid());
-	execlp ("./son", "son", NULL);
-        system("ps -xf --foreset > file");
+    pid_t pid = fork();
+
+    if (pid == 0) { // Дочерний процесс
+        execl("son.out", "son.out", NULL);
+       system("ps -xf");
+ perror("execl");
+        exit(EXIT_FAILURE);
+    } else if (pid > 0) { // Родительский процесс
+        wait(NULL); // Ожидание завершения дочернего процесса
+        printf("Дочерний процесс завершился\n");
+
+        // Получение информации о процессах
+        system("ps -xf");
+        printf("Информация о процессах сохранена в файле processes.txt\n");
     } else {
-	system("ps -xf --forest > file");
-        waitpid(pid, NULL, 0);
-        printf("Программа завершена\n");
+        perror("fork");
+        exit(EXIT_FAILURE);
     }
+
     return 0;
 }
 

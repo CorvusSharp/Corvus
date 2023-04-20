@@ -10,7 +10,7 @@ void main(int argc, char* argv[])
 int n = 0;
 struct sched_param shdprm;
 shdprm.sched_priority = 1;
-if (sched_setscheduler(0, SCHED_RR, &shdprm) == -1) {
+if (sched_setscheduler(0, SCHED_FIFO, &shdprm) == -1) {
 perror("SCHED_SETSCHEDULER");
 }
 char command_fifo[100];
