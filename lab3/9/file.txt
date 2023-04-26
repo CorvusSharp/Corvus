@@ -1,0 +1,9 @@
+  PID TTY      STAT   TIME COMMAND
+  784 tty1     Sl     0:07 bash (figterm)
+  808 pts/0    Ss     0:01  \_ /usr/bin/bash --login
+ 1657 pts/0    S      0:00      \_ ./a.out
+ 1658 pts/0    S      0:00          \_ son1
+ 1659 pts/0    S      0:00          \_ son2
+ 1660 pts/0    S      0:00          \_ son3
+ 1661 pts/0    S      0:00          \_ sh -c ps xf > file.txt
+ 1662 pts/0    R      0:00              \_ ps xf

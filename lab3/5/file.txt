@@ -1,0 +1,7 @@
+  PID TTY      STAT   TIME COMMAND
+  784 tty1     Sl     0:00 bash (figterm)
+  808 pts/0    Ss     0:00  \_ /usr/bin/bash --login
+  913 pts/0    S      0:00      \_ ./father
+  915 pts/0    S      0:00          \_ son
+  916 pts/0    S      0:00          \_ sh -c ps -xf > file.txt
+  918 pts/0    R      0:00              \_ ps -xf

@@ -1,0 +1,76 @@
+   3658    5304    5304    3658 pts/0       5304 S+       0   0:00 sudo ./father res.txt
+   5304    5305    5304    3658 pts/0       5304 S+       0   0:00  \_ ./father res.txt
+   5305    5306    5304    3658 pts/0       5304 D+       0   0:00      \_ ./father res.txt
+   5305    5307    5304    3658 pts/0       5304 D+       0   0:00      \_ ./father res.txt
+   5305    5308    5304    3658 pts/0       5304 D+       0   0:00      \_ ./father res.txt
+   5305    5309    5304    3658 pts/0       5304 S+       0   0:00      \_ sh -c ps xjf | grep "3658" >> res.txt
+   5309    5310    5304    3658 pts/0       5304 R+       0   0:00          \_ ps xjf
+   5309    5311    5304    3658 pts/0       5304 D+       0   0:00          \_ sh -c ps xjf | grep "3658" >> res.txt
+   3658    5329    5329    3658 pts/0       5329 S+       0   0:00 sudo ./father res.txt
+   5329    5330    5329    3658 pts/0       5329 S+       0   0:00  \_ ./father res.txt
+   5330    5331    5329    3658 pts/0       5329 S+       0   0:00      \_ son1
+   5330    5332    5329    3658 pts/0       5329 S+       0   0:00      \_ son2 res.txt
+   5330    5333    5329    3658 pts/0       5329 Z+       0   0:00      \_ [son3] <defunct>
+   5330    5334    5329    3658 pts/0       5329 S+       0   0:00      \_ sh -c ps xjf | grep "3658" >> res.txt
+   5334    5335    5329    3658 pts/0       5329 R+       0   0:00          \_ ps xjf
+   5334    5336    5329    3658 pts/0       5329 S+       0   0:00          \_ grep 3658
+   1407    5332    5329    3658 pts/0       3658 S        0   0:00 son2 res.txt
+   5332    5337    5329    3658 pts/0       3658 S        0   0:00  \_ sh -c ps xjf | grep son2 >> res.txt
+   5337    5339    5329    3658 pts/0       3658 S        0   0:00      \_ grep son2
+   7476    7542    7542    7476 pts/1       7542 S+       0   0:00 sudo ./father res.txt
+   7542    7543    7542    7476 pts/1       7542 S+       0   0:00  \_ ./father res.txt
+   7543    7544    7542    7476 pts/1       7542 S+       0   0:00      \_ son1
+   7543    7545    7542    7476 pts/1       7542 S+       0   0:00      \_ son2 res.txt
+   7543    7546    7542    7476 pts/1       7542 Z+       0   0:00      \_ [son3] <defunct>
+   7543    7547    7542    7476 pts/1       7542 S+       0   0:00      \_ sh -c ps xjf | grep "7476" >> res.txt
+   7547    7548    7542    7476 pts/1       7542 R+       0   0:00          \_ ps xjf
+   7547    7549    7542    7476 pts/1       7542 S+       0   0:00          \_ grep 7476
+   1493    7545    7542    7476 pts/1       7476 S        0   0:00 son2 res.txt
+   7545    7551    7542    7476 pts/1       7476 S        0   0:00  \_ sh -c ps xjf | grep son2 >> res.txt
+   7551    7553    7542    7476 pts/1       7476 S        0   0:00      \_ grep son2
+   7476    7557    7557    7476 pts/1       7557 S+       0   0:00 sudo ./father res.txt
+   7557    7558    7557    7476 pts/1       7557 S+       0   0:00  \_ ./father res.txt
+   7558    7559    7557    7476 pts/1       7557 S+       0   0:00      \_ son1
+   7558    7560    7557    7476 pts/1       7557 S+       0   0:00      \_ son2 res.txt
+   7558    7561    7557    7476 pts/1       7557 Z+       0   0:00      \_ [son3] <defunct>
+   7558    7562    7557    7476 pts/1       7557 S+       0   0:00      \_ sh -c ps xjf | grep "7476" >> res.txt
+   7562    7563    7557    7476 pts/1       7557 R+       0   0:00          \_ ps xjf
+   7562    7564    7557    7476 pts/1       7557 S+       0   0:00          \_ grep 7476
+   1493    7560    7557    7476 pts/1       7476 S        0   0:00 son2 res.txt
+   7560    7566    7557    7476 pts/1       7476 S        0   0:00  \_ sh -c ps xjf | grep son2 >> res.txt
+   7566    7568    7557    7476 pts/1       7476 S        0   0:00      \_ grep son2
+   7476    7571    7571    7476 pts/1       7571 S+       0   0:00 sudo ./father res.txt
+   7571    7572    7571    7476 pts/1       7571 S+       0   0:00  \_ ./father res.txt
+   7572    7573    7571    7476 pts/1       7571 S+       0   0:00      \_ son1
+   7572    7574    7571    7476 pts/1       7571 S+       0   0:00      \_ son2 res.txt
+   7572    7575    7571    7476 pts/1       7571 Z+       0   0:00      \_ [son3] <defunct>
+   7572    7576    7571    7476 pts/1       7571 S+       0   0:00      \_ sh -c ps xjf | grep "7476" >> res.txt
+   7576    7577    7571    7476 pts/1       7571 R+       0   0:00          \_ ps xjf
+   7576    7578    7571    7476 pts/1       7571 S+       0   0:00          \_ grep 7476
+   7476    7580    7580    7476 pts/1       7580 S+       0   0:00 sudo ./father res.txt
+   7580    7581    7580    7476 pts/1       7580 S+       0   0:00  \_ ./father res.txt
+   7581    7582    7580    7476 pts/1       7580 S+       0   0:00      \_ son1
+   7581    7583    7580    7476 pts/1       7580 S+       0   0:00      \_ son2 res.txt
+   7581    7584    7580    7476 pts/1       7580 Z+       0   0:00      \_ [son3] <defunct>
+   7581    7585    7580    7476 pts/1       7580 S+       0   0:00      \_ sh -c ps xjf | grep "7476" >> res.txt
+   7585    7586    7580    7476 pts/1       7580 R+       0   0:00          \_ ps xjf
+   7585    7587    7580    7476 pts/1       7580 S+       0   0:00          \_ grep 7476
+   1493    7574    7571    7476 pts/1       7580 S        0   0:00 son2 res.txt
+   1493    7583    7580    7476 pts/1       7476 S        0   0:00 son2 res.txt
+   1493    7574    7571    7476 pts/1       7476 S        0   0:00 son2 res.txt
+   7574    7588    7571    7476 pts/1       7476 S        0   0:00  \_ sh -c ps xjf | grep son2 >> res.txt
+   7588    7590    7571    7476 pts/1       7476 S        0   0:00      \_ grep son2
+   1493    7583    7580    7476 pts/1       7476 S        0   0:00 son2 res.txt
+   7583    7591    7580    7476 pts/1       7476 S        0   0:00  \_ sh -c ps xjf | grep son2 >> res.txt
+   7591    7593    7580    7476 pts/1       7476 S        0   0:00      \_ grep son2
+   3038    3125    3125    3038 pts/0       3125 S+       0   0:00 sudo ./father res.txt
+   3125    3137    3125    3038 pts/0       3125 S+       0   0:00  \_ ./father res.txt
+   3137    3138    3125    3038 pts/0       3125 S+       0   0:00      \_ son1
+   3137    3139    3125    3038 pts/0       3125 S+       0   0:00      \_ son2 res.txt
+   3137    3140    3125    3038 pts/0       3125 Z+       0   0:00      \_ [son3] <defunct>
+   3137    3141    3125    3038 pts/0       3125 S+       0   0:00      \_ sh -c ps xjf | grep "3038" >> res.txt
+   3141    3142    3125    3038 pts/0       3125 R+       0   0:00          \_ ps xjf
+   3141    3143    3125    3038 pts/0       3125 S+       0   0:00          \_ grep 3038
+   1690    3139    3125    3038 pts/0       3038 S        0   0:00 son2 res.txt
+   3139    3170    3125    3038 pts/0       3038 S        0   0:00  \_ sh -c ps xjf | grep son2 >> res.txt
+   3170    3172    3125    3038 pts/0       3038 S        0   0:00      \_ grep son2

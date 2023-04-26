@@ -1,0 +1,426 @@
+      2 ?        S      0:00 [kthreadd]
+      3 ?        I<     0:00  \_ [rcu_gp]
+      4 ?        I<     0:00  \_ [rcu_par_gp]
+      5 ?        I<     0:00  \_ [slub_flushwq]
+      6 ?        I<     0:00  \_ [netns]
+      8 ?        I<     0:00  \_ [kworker/0:0H-events_highpri]
+     10 ?        I<     0:00  \_ [mm_percpu_wq]
+     11 ?        S      0:00  \_ [rcu_tasks_rude_]
+     12 ?        S      0:00  \_ [rcu_tasks_trace]
+     13 ?        S      0:00  \_ [ksoftirqd/0]
+     14 ?        I      0:03  \_ [rcu_sched]
+     15 ?        S      0:00  \_ [migration/0]
+     16 ?        S      0:00  \_ [idle_inject/0]
+     17 ?        I      0:02  \_ [kworker/0:1-cgroup_destroy]
+     18 ?        S      0:00  \_ [cpuhp/0]
+     19 ?        S      0:00  \_ [cpuhp/1]
+     20 ?        S      0:00  \_ [idle_inject/1]
+     21 ?        S      0:00  \_ [migration/1]
+     22 ?        S      0:00  \_ [ksoftirqd/1]
+     24 ?        I<     0:00  \_ [kworker/1:0H-kblockd]
+     25 ?        S      0:00  \_ [kdevtmpfs]
+     26 ?        I<     0:00  \_ [inet_frag_wq]
+     27 ?        S      0:00  \_ [kauditd]
+     28 ?        S      0:00  \_ [khungtaskd]
+     29 ?        S      0:00  \_ [oom_reaper]
+     30 ?        I<     0:00  \_ [writeback]
+     31 ?        S      0:00  \_ [kcompactd0]
+     32 ?        SN     0:00  \_ [ksmd]
+     33 ?        SN     0:00  \_ [khugepaged]
+     80 ?        I<     0:00  \_ [kintegrityd]
+     81 ?        I<     0:00  \_ [kblockd]
+     82 ?        I<     0:00  \_ [blkcg_punt_bio]
+     83 ?        I<     0:00  \_ [tpm_dev_wq]
+     84 ?        I<     0:00  \_ [ata_sff]
+     85 ?        I<     0:00  \_ [md]
+     86 ?        I<     0:00  \_ [edac-poller]
+     87 ?        I<     0:00  \_ [devfreq_wq]
+     88 ?        S      0:00  \_ [watchdogd]
+     90 ?        I<     0:00  \_ [kworker/0:1H-kblockd]
+     93 ?        S      0:00  \_ [kswapd0]
+     94 ?        S      0:00  \_ [ecryptfs-kthrea]
+     96 ?        I<     0:00  \_ [kthrotld]
+     97 ?        I<     0:00  \_ [acpi_thermal_pm]
+     98 ?        S      0:00  \_ [scsi_eh_0]
+     99 ?        I<     0:00  \_ [scsi_tmf_0]
+    100 ?        S      0:00  \_ [scsi_eh_1]
+    101 ?        I<     0:00  \_ [scsi_tmf_1]
+    103 ?        I<     0:00  \_ [vfio-irqfd-clea]
+    104 ?        I<     0:00  \_ [mld]
+    105 ?        I<     0:00  \_ [ipv6_addrconf]
+    116 ?        I<     0:00  \_ [kstrp]
+    119 ?        I<     0:00  \_ [zswap-shrink]
+    120 ?        I<     0:00  \_ [kworker/u5:0]
+    125 ?        I<     0:00  \_ [charger_manager]
+    172 ?        S      0:00  \_ [scsi_eh_2]
+    173 ?        I<     0:00  \_ [scsi_tmf_2]
+    175 ?        I<     0:00  \_ [kworker/1:1H-kblockd]
+    195 ?        S      0:00  \_ [jbd2/sda5-8]
+    196 ?        I<     0:00  \_ [ext4-rsv-conver]
+    254 ?        I      0:00  \_ [kworker/1:3-cgroup_destroy]
+    284 ?        I<     0:00  \_ [ttm_swap]
+    285 ?        S      0:00  \_ [irq/18-vmwgfx]
+    286 ?        S      0:00  \_ [card0-crtc0]
+    287 ?        S      0:00  \_ [card0-crtc1]
+    288 ?        S      0:00  \_ [card0-crtc2]
+    289 ?        S      0:00  \_ [card0-crtc3]
+    290 ?        S      0:00  \_ [card0-crtc4]
+    291 ?        S      0:00  \_ [card0-crtc5]
+    292 ?        S      0:00  \_ [card0-crtc6]
+    293 ?        S      0:00  \_ [card0-crtc7]
+    343 ?        I<     0:00  \_ [iprt-VBoxWQueue]
+    344 ?        I<     0:00  \_ [cryptd]
+    898 ?        I<     0:00  \_ [iprt-VBoxWQueue]
+    901 ?        S      0:00  \_ [iprt-VBoxTscThr]
+   1021 ?        S      0:00  \_ bpfilter_umh
+   4114 ?        I      0:00  \_ [kworker/1:1-mm_percpu_wq]
+   4157 ?        I      0:00  \_ [kworker/u4:2-flush-8:0]
+   4158 ?        I      0:00  \_ [kworker/0:0-events]
+   4265 ?        I      0:00  \_ [kworker/u4:1-ext4-rsv-conversion]
+   4302 ?        I      0:00  \_ [kworker/u4:0-events_unbound]
+      1 ?        Ss     0:02 /sbin/init splash
+    236 ?        S<s    0:01 /lib/systemd/systemd-journald
+    265 ?        Ss     0:00 /lib/systemd/systemd-udevd
+    603 ?        Ss     0:00 /lib/systemd/systemd-resolved
+    604 ?        Ssl    0:00 /lib/systemd/systemd-timesyncd
+    650 ?        Ssl    0:00 /usr/lib/accountsservice/accounts-daemon
+    651 ?        Ss     0:00 /usr/sbin/acpid
+    653 ?        Ss     0:00 avahi-daemon: running [roman-VirtualBox.local]
+    695 ?        S      0:00  \_ avahi-daemon: chroot helper
+    655 ?        Ss     0:00 /usr/sbin/cron -f
+    656 ?        Ss     0:00 /usr/sbin/cupsd -l
+    737 ?        S      0:00  \_ /usr/lib/cups/notifier/dbus dbus://
+    738 ?        S      0:00  \_ /usr/lib/cups/notifier/dbus dbus://
+    743 ?        S      0:00  \_ /usr/lib/cups/notifier/dbus dbus://
+    657 ?        Ss     0:03 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    658 ?        Ssl    0:01 /usr/sbin/NetworkManager --no-daemon
+    664 ?        Ssl    0:00 /usr/sbin/irqbalance --foreground
+    665 ?        Ss     0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    666 ?        Ssl    0:02 /usr/lib/policykit-1/polkitd --no-debug
+    669 ?        Ssl    0:00 /usr/sbin/rsyslogd -n -iNONE
+    672 ?        Ssl    0:08 /usr/lib/snapd/snapd
+    673 ?        Ssl    0:00 /usr/libexec/switcheroo-control
+    676 ?        Ss     0:00 /lib/systemd/systemd-logind
+    679 ?        Ssl    0:00 /usr/lib/udisks2/udisksd
+    685 ?        Ss     0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+    739 ?        Ssl    0:00 /usr/sbin/cups-browsed
+    745 ?        Ssl    0:00 /usr/sbin/ModemManager
+    757 ?        Ssl    0:07 dockerd --group docker --exec-root=/run/snap.docker --data-root=/var/snap/docker/common/var-lib-docker --pidfile=/run/snap.docker/docker.pid --config-file=/var/snap/docker/2746/config/daemon.json
+   1724 ?        Ssl    0:06  \_ containerd --config /run/snap.docker/containerd/containerd.toml --log-level error
+   1836 ?        Sl     0:00  \_ /snap/docker/2746/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 27017 -container-ip 172.18.0.3 -container-port 27017
+   1866 ?        Sl     0:00  \_ /snap/docker/2746/bin/docker-proxy -proto tcp -host-ip :: -host-port 27017 -container-ip 172.18.0.3 -container-port 27017
+    759 ?        Ssl    0:02 /usr/bin/containerd
+    799 ?        Sl     0:01 /usr/bin/VBoxDRMClient
+    803 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+    807 ?        Sl     0:00 /usr/sbin/VBoxService
+    867 ?        Ssl    0:00 /usr/bin/whoopsie -f
+    869 ?        Ss     0:00 /usr/sbin/kerneloops --test
+    873 ?        Ss     0:00 /usr/sbin/kerneloops
+    913 ?        Ssl    0:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+   1225 ?        Ssl    0:00 /usr/sbin/gdm3
+   1721 ?        Sl     0:00  \_ gdm-session-worker [pam/gdm-password]
+   2112 tty2     Ssl+   0:00      \_ /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+   2114 tty2     Rl+    0:51          \_ /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+   2164 tty2     Sl+    0:00          \_ /usr/libexec/gnome-session-binary --systemd --systemd --session=ubuntu
+   2281 ?        Ss     0:00              \_ /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+   1286 ?        SNsl   0:00 /usr/libexec/rtkit-daemon
+   1385 ?        Ssl    0:00 /usr/lib/upower/upowerd
+   1461 ?        Ssl    0:00 /usr/libexec/geoclue
+   1588 ?        Ssl    0:00 /usr/libexec/colord
+   1969 ?        Sl     0:00 /snap/docker/2746/bin/containerd-shim-runc-v2 -namespace moby -id 5bf6865c9accb2b4fc048c41303cf5a9d6ed9d5655ceb53cce124a49275f4d93 -address /run/snap.docker/containerd/containerd.sock
+   1991 ?        Ssl    0:08  \_ redis-server *:6379
+   2066 ?        Ss     0:00 /lib/systemd/systemd --user
+   2067 ?        S      0:00  \_ (sd-pam)
+   2072 ?        S<sl   0:01  \_ /usr/bin/pulseaudio --daemonize=no --log-target=journal
+   2074 ?        SNsl   0:00  \_ /usr/libexec/tracker-miner-fs
+   2080 ?        Ss     0:00  \_ /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   2097 ?        Ssl    0:00  \_ /usr/libexec/gvfsd
+   2485 ?        Sl     0:00  |   \_ /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+   2102 ?        Sl     0:00  \_ /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+   2115 ?        Ssl    0:00  \_ /usr/libexec/gvfs-udisks2-volume-monitor
+   2124 ?        Ssl    0:00  \_ /usr/libexec/gvfs-mtp-volume-monitor
+   2130 ?        Ssl    0:00  \_ /usr/libexec/gvfs-afc-volume-monitor
+   2136 ?        Ssl    0:00  \_ /usr/libexec/gvfs-goa-volume-monitor
+   2140 ?        SLl    0:00  \_ /usr/libexec/goa-daemon
+   2149 ?        Sl     0:00  \_ /usr/libexec/goa-identity-service
+   2156 ?        Ssl    0:00  \_ /usr/libexec/gvfs-gphoto2-volume-monitor
+   2300 ?        Sl     0:00  \_ /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+   2307 ?        Ssl    0:00  \_ /usr/libexec/at-spi-bus-launcher
+   2312 ?        S      0:00  |   \_ /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+   2329 ?        Ssl    0:00  \_ /usr/libexec/gnome-session-ctl --monitor
+   2335 ?        Ssl    0:00  \_ /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+   2556 ?        Sl     0:00  |   \_ /usr/libexec/gsd-disk-utility-notify
+   2561 ?        Sl     0:00  |   \_ /usr/libexec/evolution-data-server/evolution-alarm-notify
+   3538 ?        Sl     0:00  |   \_ update-notifier
+   2349 ?        Ssl    2:13  \_ /usr/bin/gnome-shell
+   2376 ?        Sl     0:09  |   \_ ibus-daemon --panel disable --xim
+   2380 ?        Sl     0:00  |       \_ /usr/libexec/ibus-dconf
+   2381 ?        Sl     0:04  |       \_ /usr/libexec/ibus-extension-gtk3
+   2629 ?        Sl     0:03  |       \_ /usr/libexec/ibus-engine-simple
+   2385 ?        Sl     0:00  \_ /usr/libexec/ibus-x11 --kill-daemon
+   2388 ?        Sl     0:00  \_ /usr/libexec/ibus-portal
+   2398 ?        Sl     0:00  \_ /usr/libexec/at-spi2-registryd --use-gnome-session
+   2402 ?        Ssl    0:00  \_ /usr/libexec/xdg-permission-store
+   2404 ?        Sl     0:00  \_ /usr/libexec/gnome-shell-calendar-server
+   2415 ?        Ssl    0:00  \_ /usr/libexec/evolution-source-registry
+   2423 ?        Sl     0:00  \_ /usr/libexec/dconf-service
+   2426 ?        Ssl    0:00  \_ /usr/libexec/gvfsd-metadata
+   2435 ?        Ssl    0:00  \_ /usr/libexec/evolution-calendar-factory
+   2456 ?        Ssl    0:00  \_ /usr/libexec/evolution-addressbook-factory
+   2479 ?        Sl     0:00  \_ /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+   2500 ?        Ssl    0:00  \_ /usr/libexec/gsd-a11y-settings
+   2502 ?        Ssl    0:00  \_ /usr/libexec/gsd-color
+   2503 ?        Ssl    0:00  \_ /usr/libexec/gsd-datetime
+   2505 ?        Ssl    0:00  \_ /usr/libexec/gsd-housekeeping
+   2506 ?        Ssl    0:00  \_ /usr/libexec/gsd-keyboard
+   2507 ?        Ssl    0:00  \_ /usr/libexec/gsd-media-keys
+   2509 ?        Ssl    0:00  \_ /usr/libexec/gsd-power
+   2510 ?        Ssl    0:00  \_ /usr/libexec/gsd-print-notifications
+   2511 ?        Ssl    0:00  \_ /usr/libexec/gsd-rfkill
+   2517 ?        Ssl    0:00  \_ /usr/libexec/gsd-screensaver-proxy
+   2523 ?        Ssl    0:00  \_ /usr/libexec/gsd-sharing
+   2525 ?        Ssl    0:00  \_ /usr/libexec/gsd-smartcard
+   2530 ?        Ssl    0:00  \_ /usr/libexec/gsd-sound
+   2533 ?        Ssl    0:00  \_ /usr/libexec/gsd-usb-protection
+   2538 ?        Ssl    0:00  \_ /usr/libexec/gsd-wacom
+   2540 ?        Ssl    0:00  \_ /usr/libexec/gsd-wwan
+   2543 ?        Ssl    0:00  \_ /usr/libexec/gsd-xsettings
+   2627 ?        Sl     0:00  \_ /usr/libexec/gsd-printer
+   2683 ?        Sl     0:11  \_ /snap/snap-store/638/usr/bin/snap-store --gapplication-service
+   2712 ?        Ssl    0:00  \_ /usr/libexec/xdg-document-portal
+   2837 ?        Ssl    0:00  \_ /usr/libexec/xdg-desktop-portal
+   2841 ?        Ssl    0:00  \_ /usr/libexec/xdg-desktop-portal-gtk
+   2886 ?        Ssl    0:24  \_ /usr/libexec/gnome-terminal-server
+   2897 pts/0    Ss+    0:00  |   \_ bash
+   3532 pts/1    Ss     0:00  |   \_ bash
+   4304 pts/1    S+     0:00  |   |   \_ ./18
+   4305 pts/1    S+     0:00  |   |       \_ sh -c ps axhf > file.txt
+   4306 pts/1    R+     0:00  |   |           \_ ps axhf
+   3712 pts/2    Ss+    0:00  |   \_ bash
+   3443 ?        Sl     0:08  \_ /usr/bin/nautilus --gapplication-service
+   3634 ?        SNl    0:18  \_ /usr/bin/python3 /usr/bin/update-manager --no-update --no-focus-on-map
+   4296 ?        Ssl    0:00  \_ /usr/libexec/tracker-store
+   2078 ?        Sl     0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+   2241 ?        S      0:00 /usr/bin/VBoxClient --clipboard
+   2242 ?        Sl     0:00  \_ /usr/bin/VBoxClient --clipboard
+   2257 ?        S      0:00 /usr/bin/VBoxClient --seamless
+   2258 ?        Sl     0:03  \_ /usr/bin/VBoxClient --seamless
+   2264 ?        S      0:00 /usr/bin/VBoxClient --draganddrop
+   2268 ?        Sl     0:11  \_ /usr/bin/VBoxClient --draganddrop
+   2269 ?        S      0:00 /usr/bin/VBoxClient --vmsvga-session
+   2271 ?        Sl     0:01  \_ /usr/bin/VBoxClient --vmsvga-session
+   2878 ?        Ssl    0:01 /usr/libexec/fwupd/fwupd
+      2 ?        S      0:00 [kthreadd]
+      3 ?        I<     0:00  \_ [rcu_gp]
+      4 ?        I<     0:00  \_ [rcu_par_gp]
+      5 ?        I<     0:00  \_ [slub_flushwq]
+      6 ?        I<     0:00  \_ [netns]
+      8 ?        I<     0:00  \_ [kworker/0:0H-events_highpri]
+     10 ?        I<     0:00  \_ [mm_percpu_wq]
+     11 ?        S      0:00  \_ [rcu_tasks_rude_]
+     12 ?        S      0:00  \_ [rcu_tasks_trace]
+     13 ?        S      0:00  \_ [ksoftirqd/0]
+     14 ?        I      0:03  \_ [rcu_sched]
+     15 ?        S      0:00  \_ [migration/0]
+     16 ?        S      0:00  \_ [idle_inject/0]
+     17 ?        I      0:02  \_ [kworker/0:1-cgroup_destroy]
+     18 ?        S      0:00  \_ [cpuhp/0]
+     19 ?        S      0:00  \_ [cpuhp/1]
+     20 ?        S      0:00  \_ [idle_inject/1]
+     21 ?        S      0:00  \_ [migration/1]
+     22 ?        S      0:00  \_ [ksoftirqd/1]
+     24 ?        I<     0:00  \_ [kworker/1:0H-kblockd]
+     25 ?        S      0:00  \_ [kdevtmpfs]
+     26 ?        I<     0:00  \_ [inet_frag_wq]
+     27 ?        S      0:00  \_ [kauditd]
+     28 ?        S      0:00  \_ [khungtaskd]
+     29 ?        S      0:00  \_ [oom_reaper]
+     30 ?        I<     0:00  \_ [writeback]
+     31 ?        S      0:00  \_ [kcompactd0]
+     32 ?        SN     0:00  \_ [ksmd]
+     33 ?        SN     0:00  \_ [khugepaged]
+     80 ?        I<     0:00  \_ [kintegrityd]
+     81 ?        I<     0:00  \_ [kblockd]
+     82 ?        I<     0:00  \_ [blkcg_punt_bio]
+     83 ?        I<     0:00  \_ [tpm_dev_wq]
+     84 ?        I<     0:00  \_ [ata_sff]
+     85 ?        I<     0:00  \_ [md]
+     86 ?        I<     0:00  \_ [edac-poller]
+     87 ?        I<     0:00  \_ [devfreq_wq]
+     88 ?        S      0:00  \_ [watchdogd]
+     90 ?        I<     0:00  \_ [kworker/0:1H-kblockd]
+     93 ?        S      0:00  \_ [kswapd0]
+     94 ?        S      0:00  \_ [ecryptfs-kthrea]
+     96 ?        I<     0:00  \_ [kthrotld]
+     97 ?        I<     0:00  \_ [acpi_thermal_pm]
+     98 ?        S      0:00  \_ [scsi_eh_0]
+     99 ?        I<     0:00  \_ [scsi_tmf_0]
+    100 ?        S      0:00  \_ [scsi_eh_1]
+    101 ?        I<     0:00  \_ [scsi_tmf_1]
+    103 ?        I<     0:00  \_ [vfio-irqfd-clea]
+    104 ?        I<     0:00  \_ [mld]
+    105 ?        I<     0:00  \_ [ipv6_addrconf]
+    116 ?        I<     0:00  \_ [kstrp]
+    119 ?        I<     0:00  \_ [zswap-shrink]
+    120 ?        I<     0:00  \_ [kworker/u5:0]
+    125 ?        I<     0:00  \_ [charger_manager]
+    172 ?        S      0:00  \_ [scsi_eh_2]
+    173 ?        I<     0:00  \_ [scsi_tmf_2]
+    175 ?        I<     0:00  \_ [kworker/1:1H-kblockd]
+    195 ?        S      0:00  \_ [jbd2/sda5-8]
+    196 ?        I<     0:00  \_ [ext4-rsv-conver]
+    254 ?        I      0:00  \_ [kworker/1:3-cgroup_destroy]
+    284 ?        I<     0:00  \_ [ttm_swap]
+    285 ?        S      0:00  \_ [irq/18-vmwgfx]
+    286 ?        S      0:00  \_ [card0-crtc0]
+    287 ?        S      0:00  \_ [card0-crtc1]
+    288 ?        S      0:00  \_ [card0-crtc2]
+    289 ?        S      0:00  \_ [card0-crtc3]
+    290 ?        S      0:00  \_ [card0-crtc4]
+    291 ?        S      0:00  \_ [card0-crtc5]
+    292 ?        S      0:00  \_ [card0-crtc6]
+    293 ?        S      0:00  \_ [card0-crtc7]
+    343 ?        I<     0:00  \_ [iprt-VBoxWQueue]
+    344 ?        I<     0:00  \_ [cryptd]
+    898 ?        I<     0:00  \_ [iprt-VBoxWQueue]
+    901 ?        S      0:00  \_ [iprt-VBoxTscThr]
+   1021 ?        S      0:00  \_ bpfilter_umh
+   4114 ?        I      0:00  \_ [kworker/1:1-mm_percpu_wq]
+   4157 ?        I      0:00  \_ [kworker/u4:2-flush-8:0]
+   4158 ?        I      0:00  \_ [kworker/0:0-events]
+   4265 ?        I      0:00  \_ [kworker/u4:1-ext4-rsv-conversion]
+   4302 ?        I      0:00  \_ [kworker/u4:0-events_unbound]
+      1 ?        Ss     0:02 /sbin/init splash
+    236 ?        S<s    0:01 /lib/systemd/systemd-journald
+    265 ?        Ss     0:00 /lib/systemd/systemd-udevd
+    603 ?        Ss     0:00 /lib/systemd/systemd-resolved
+    604 ?        Ssl    0:00 /lib/systemd/systemd-timesyncd
+    650 ?        Ssl    0:00 /usr/lib/accountsservice/accounts-daemon
+    651 ?        Ss     0:00 /usr/sbin/acpid
+    653 ?        Ss     0:00 avahi-daemon: running [roman-VirtualBox.local]
+    695 ?        S      0:00  \_ avahi-daemon: chroot helper
+    655 ?        Ss     0:00 /usr/sbin/cron -f
+    656 ?        Ss     0:00 /usr/sbin/cupsd -l
+    737 ?        S      0:00  \_ /usr/lib/cups/notifier/dbus dbus://
+    738 ?        S      0:00  \_ /usr/lib/cups/notifier/dbus dbus://
+    743 ?        S      0:00  \_ /usr/lib/cups/notifier/dbus dbus://
+    657 ?        Ss     0:03 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    658 ?        Ssl    0:01 /usr/sbin/NetworkManager --no-daemon
+    664 ?        Ssl    0:00 /usr/sbin/irqbalance --foreground
+    665 ?        Ss     0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    666 ?        Ssl    0:02 /usr/lib/policykit-1/polkitd --no-debug
+    669 ?        Ssl    0:00 /usr/sbin/rsyslogd -n -iNONE
+    672 ?        Ssl    0:08 /usr/lib/snapd/snapd
+    673 ?        Ssl    0:00 /usr/libexec/switcheroo-control
+    676 ?        Ss     0:00 /lib/systemd/systemd-logind
+    679 ?        Ssl    0:00 /usr/lib/udisks2/udisksd
+    685 ?        Ss     0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+    739 ?        Ssl    0:00 /usr/sbin/cups-browsed
+    745 ?        Ssl    0:00 /usr/sbin/ModemManager
+    757 ?        Ssl    0:07 dockerd --group docker --exec-root=/run/snap.docker --data-root=/var/snap/docker/common/var-lib-docker --pidfile=/run/snap.docker/docker.pid --config-file=/var/snap/docker/2746/config/daemon.json
+   1724 ?        Ssl    0:06  \_ containerd --config /run/snap.docker/containerd/containerd.toml --log-level error
+   1836 ?        Sl     0:00  \_ /snap/docker/2746/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 27017 -container-ip 172.18.0.3 -container-port 27017
+   1866 ?        Sl     0:00  \_ /snap/docker/2746/bin/docker-proxy -proto tcp -host-ip :: -host-port 27017 -container-ip 172.18.0.3 -container-port 27017
+    759 ?        Ssl    0:02 /usr/bin/containerd
+    799 ?        Sl     0:01 /usr/bin/VBoxDRMClient
+    803 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+    807 ?        Sl     0:00 /usr/sbin/VBoxService
+    867 ?        Ssl    0:00 /usr/bin/whoopsie -f
+    869 ?        Ss     0:00 /usr/sbin/kerneloops --test
+    873 ?        Ss     0:00 /usr/sbin/kerneloops
+    913 ?        Ssl    0:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+   1225 ?        Ssl    0:00 /usr/sbin/gdm3
+   1721 ?        Sl     0:00  \_ gdm-session-worker [pam/gdm-password]
+   2112 tty2     Ssl+   0:00      \_ /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+   2114 tty2     Sl+    0:51          \_ /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+   2164 tty2     Sl+    0:00          \_ /usr/libexec/gnome-session-binary --systemd --systemd --session=ubuntu
+   2281 ?        Ss     0:00              \_ /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+   1286 ?        SNsl   0:00 /usr/libexec/rtkit-daemon
+   1385 ?        Ssl    0:00 /usr/lib/upower/upowerd
+   1461 ?        Ssl    0:00 /usr/libexec/geoclue
+   1588 ?        Ssl    0:00 /usr/libexec/colord
+   1969 ?        Sl     0:00 /snap/docker/2746/bin/containerd-shim-runc-v2 -namespace moby -id 5bf6865c9accb2b4fc048c41303cf5a9d6ed9d5655ceb53cce124a49275f4d93 -address /run/snap.docker/containerd/containerd.sock
+   1991 ?        Ssl    0:08  \_ redis-server *:6379
+   2066 ?        Ss     0:00 /lib/systemd/systemd --user
+   2067 ?        S      0:00  \_ (sd-pam)
+   2072 ?        S<sl   0:01  \_ /usr/bin/pulseaudio --daemonize=no --log-target=journal
+   2074 ?        SNsl   0:00  \_ /usr/libexec/tracker-miner-fs
+   2080 ?        Ss     0:00  \_ /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   2097 ?        Ssl    0:00  \_ /usr/libexec/gvfsd
+   2485 ?        Sl     0:00  |   \_ /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+   2102 ?        Sl     0:00  \_ /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+   2115 ?        Ssl    0:00  \_ /usr/libexec/gvfs-udisks2-volume-monitor
+   2124 ?        Ssl    0:00  \_ /usr/libexec/gvfs-mtp-volume-monitor
+   2130 ?        Ssl    0:00  \_ /usr/libexec/gvfs-afc-volume-monitor
+   2136 ?        Ssl    0:00  \_ /usr/libexec/gvfs-goa-volume-monitor
+   2140 ?        SLl    0:00  \_ /usr/libexec/goa-daemon
+   2149 ?        Sl     0:00  \_ /usr/libexec/goa-identity-service
+   2156 ?        Ssl    0:00  \_ /usr/libexec/gvfs-gphoto2-volume-monitor
+   2300 ?        Sl     0:00  \_ /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+   2307 ?        Ssl    0:00  \_ /usr/libexec/at-spi-bus-launcher
+   2312 ?        S      0:00  |   \_ /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+   2329 ?        Ssl    0:00  \_ /usr/libexec/gnome-session-ctl --monitor
+   2335 ?        Ssl    0:00  \_ /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+   2556 ?        Sl     0:00  |   \_ /usr/libexec/gsd-disk-utility-notify
+   2561 ?        Sl     0:00  |   \_ /usr/libexec/evolution-data-server/evolution-alarm-notify
+   3538 ?        Sl     0:00  |   \_ update-notifier
+   2349 ?        Ssl    2:13  \_ /usr/bin/gnome-shell
+   2376 ?        Sl     0:09  |   \_ ibus-daemon --panel disable --xim
+   2380 ?        Sl     0:00  |       \_ /usr/libexec/ibus-dconf
+   2381 ?        Sl     0:04  |       \_ /usr/libexec/ibus-extension-gtk3
+   2629 ?        Sl     0:03  |       \_ /usr/libexec/ibus-engine-simple
+   2385 ?        Sl     0:00  \_ /usr/libexec/ibus-x11 --kill-daemon
+   2388 ?        Sl     0:00  \_ /usr/libexec/ibus-portal
+   2398 ?        Sl     0:00  \_ /usr/libexec/at-spi2-registryd --use-gnome-session
+   2402 ?        Ssl    0:00  \_ /usr/libexec/xdg-permission-store
+   2404 ?        Sl     0:00  \_ /usr/libexec/gnome-shell-calendar-server
+   2415 ?        Ssl    0:00  \_ /usr/libexec/evolution-source-registry
+   2423 ?        Sl     0:00  \_ /usr/libexec/dconf-service
+   2426 ?        Ssl    0:00  \_ /usr/libexec/gvfsd-metadata
+   2435 ?        Ssl    0:00  \_ /usr/libexec/evolution-calendar-factory
+   2456 ?        Ssl    0:00  \_ /usr/libexec/evolution-addressbook-factory
+   2479 ?        Sl     0:00  \_ /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+   2500 ?        Ssl    0:00  \_ /usr/libexec/gsd-a11y-settings
+   2502 ?        Ssl    0:00  \_ /usr/libexec/gsd-color
+   2503 ?        Ssl    0:00  \_ /usr/libexec/gsd-datetime
+   2505 ?        Ssl    0:00  \_ /usr/libexec/gsd-housekeeping
+   2506 ?        Ssl    0:00  \_ /usr/libexec/gsd-keyboard
+   2507 ?        Ssl    0:00  \_ /usr/libexec/gsd-media-keys
+   2509 ?        Ssl    0:00  \_ /usr/libexec/gsd-power
+   2510 ?        Ssl    0:00  \_ /usr/libexec/gsd-print-notifications
+   2511 ?        Ssl    0:00  \_ /usr/libexec/gsd-rfkill
+   2517 ?        Ssl    0:00  \_ /usr/libexec/gsd-screensaver-proxy
+   2523 ?        Ssl    0:00  \_ /usr/libexec/gsd-sharing
+   2525 ?        Ssl    0:00  \_ /usr/libexec/gsd-smartcard
+   2530 ?        Ssl    0:00  \_ /usr/libexec/gsd-sound
+   2533 ?        Ssl    0:00  \_ /usr/libexec/gsd-usb-protection
+   2538 ?        Ssl    0:00  \_ /usr/libexec/gsd-wacom
+   2540 ?        Ssl    0:00  \_ /usr/libexec/gsd-wwan
+   2543 ?        Ssl    0:00  \_ /usr/libexec/gsd-xsettings
+   2627 ?        Sl     0:00  \_ /usr/libexec/gsd-printer
+   2683 ?        Sl     0:11  \_ /snap/snap-store/638/usr/bin/snap-store --gapplication-service
+   2712 ?        Ssl    0:00  \_ /usr/libexec/xdg-document-portal
+   2837 ?        Ssl    0:00  \_ /usr/libexec/xdg-desktop-portal
+   2841 ?        Ssl    0:00  \_ /usr/libexec/xdg-desktop-portal-gtk
+   2886 ?        Ssl    0:24  \_ /usr/libexec/gnome-terminal-server
+   2897 pts/0    Ss+    0:00  |   \_ bash
+   3532 pts/1    Ss     0:00  |   \_ bash
+   4304 pts/1    Sl+    0:00  |   |   \_ ./18
+   4309 pts/1    S+     0:00  |   |       \_ sh -c ps axhf >> file.txt
+   4312 pts/1    R+     0:00  |   |       |   \_ ps axhf
+   4310 pts/1    S+     0:00  |   |       \_ sh -c ps axhf > threadn.txt
+   4311 pts/1    S+     0:00  |   |       \_ sh -c ps axhf > threadn.txt
+   3712 pts/2    Ss+    0:00  |   \_ bash
+   3443 ?        Sl     0:08  \_ /usr/bin/nautilus --gapplication-service
+   3634 ?        SNl    0:18  \_ /usr/bin/python3 /usr/bin/update-manager --no-update --no-focus-on-map
+   4296 ?        Ssl    0:00  \_ /usr/libexec/tracker-store
+   2078 ?        Sl     0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+   2241 ?        S      0:00 /usr/bin/VBoxClient --clipboard
+   2242 ?        Sl     0:00  \_ /usr/bin/VBoxClient --clipboard
+   2257 ?        S      0:00 /usr/bin/VBoxClient --seamless
+   2258 ?        Sl     0:03  \_ /usr/bin/VBoxClient --seamless
+   2264 ?        S      0:00 /usr/bin/VBoxClient --draganddrop
+   2268 ?        Sl     0:11  \_ /usr/bin/VBoxClient --draganddrop
+   2269 ?        S      0:00 /usr/bin/VBoxClient --vmsvga-session
+   2271 ?        Sl     0:01  \_ /usr/bin/VBoxClient --vmsvga-session
+   2878 ?        Ssl    0:01 /usr/libexec/fwupd/fwupd

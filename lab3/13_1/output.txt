@@ -1,0 +1,14 @@
+Starting demonstration of all three situations:
+Case A: Child process running.
+Case A: Child process finishing.
+Case A: Parent process after child process completion.
+Case B: Parent process finishing without waiting for child process.
+Case B: Child process running.
+Case B: Child process finishing.
+Starting demonstration of all three situations:
+Case A: Child process running.
+Case A: Child process finishing.
+Case A: Parent process after child process completion.
+Case B: Parent process finishing without waiting for child process.
+Case B: Child process running.
+Case B: Child process finishing.
