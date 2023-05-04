@@ -12,10 +12,16 @@ int main() {
     ppid = getppid();
     int schedule = sched_getscheduler(0);
     switch (schedule) {
-        printf("SCHED_FIFO\n");
-        break;
+        case SCHED_FIFO:
+	    for (int i = 0; i <1000000; i++){
+		k += 1;	
+		int j ;
+j +=10;	
+		}
+            printf("SCHED_FIFO\n");
+            break;
         case SCHED_RR:
-            for (int i = 0; i < 100000000; i++) {
+            for (int i = 0; i < 1000000; i++) {
                 k += 1;
             }
             printf("SCHED_RR\n");
@@ -28,6 +34,8 @@ int main() {
             break;
         default:
             printf("Неизвестная политика планирования\n");
+            break;
     }
     return 0;
 }
+
