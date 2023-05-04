@@ -1,0 +1,12 @@
+ PPID   PID  PGID   SID TTY      TPGID STAT   UID   TIME COMMAND
+    9    10    10    10 pts/0      945 Ss       0   0:02      \_ -bash
+   10   945   945    10 pts/0      945 S+       0   0:00          \_ ./father res_2.txt
+  945   946   945    10 pts/0      945 S+       0   0:00              \_ son1
+  945   947   945    10 pts/0      945 S+       0   0:00              \_ son2 res_2.txt
+  945   948   945    10 pts/0      945 S+       0   0:00              \_ ./father res_2.txt
+  948   950   945    10 pts/0      945 S+       0   0:00              |   \_ sh -c ps -axjf | grep "STAT\|10" > res_2.txt
+  950   952   945    10 pts/0      945 R+       0   0:00              |       \_ ps -axjf
+  950   954   945    10 pts/0      945 S+       0   0:00              |       \_ grep STAT\|10
+  945   949   945    10 pts/0      945 S+       0   0:00              \_ sh -c ps -axjf | grep "STAT\|10" > res_2.txt
+  949   951   945    10 pts/0      945 R+       0   0:00                  \_ ps -axjf
+  949   953   945    10 pts/0      945 S+       0   0:00                  \_ grep STAT\|10

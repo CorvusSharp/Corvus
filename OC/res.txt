@@ -1,0 +1,9 @@
+   PPID     PID    PGID     SID TTY        TPGID STAT   UID   TIME COMMAND
+   6543    6544    6544    6544 pts/1       6545 Ss       0   0:00  \_ sudo ./father res.txt
+   6544    6545    6545    6544 pts/1       6545 S+       0   0:00      \_ ./father res.txt
+   6545    6546    6545    6544 pts/1       6545 S+       0   0:00          \_ son1
+   6545    6547    6545    6544 pts/1       6545 S+       0   0:00          \_ son2 res.txt
+   6545    6548    6545    6544 pts/1       6545 S+       0   0:00          \_ son3
+   6545    6549    6545    6544 pts/1       6545 S+       0   0:00          \_ sh -c ps -xjf | grep "STAT\|6544" > res.txt
+   6549    6550    6545    6544 pts/1       6545 R+       0   0:00              \_ ps -xjf
+   6549    6551    6545    6544 pts/1       6545 S+       0   0:00              \_ grep STAT\|6544
