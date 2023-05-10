@@ -1,0 +1,12 @@
+ PPID   PID  PGID   SID TTY      TPGID STAT   UID   TIME COMMAND
+    9    10    10    10 pts/0      471 Ss       0   0:01      \_ -bash
+   10   471   471    10 pts/0      471 S+       0   0:00          \_ ./father res2-3.txt
+  471   472   471    10 pts/0      471 S+       0   0:00              \_ son1
+  471   473   471    10 pts/0      471 S+       0   0:00              \_ son2 res2-3.txt
+  471   474   471    10 pts/0      471 Z+       0   0:00              \_ [son3] <defunct>
+  471   475   471    10 pts/0      471 S+       0   0:00              \_ sh -c ps -xjf | grep "STAT\|10" > res2-3.txt
+  475   476   471    10 pts/0      471 R+       0   0:00                  \_ ps -xjf
+  475   477   471    10 pts/0      471 S+       0   0:00                  \_ grep STAT\|10
+    9   473   471    10 pts/0       10 S        0   0:00      \_ son2 res2-3.txt
+  473   478   471    10 pts/0       10 S        0   0:00          \_ sh -c ps xjf | grep son2 >> res2-3.txt
+  478   480   471    10 pts/0       10 S        0   0:00              \_ grep son2
