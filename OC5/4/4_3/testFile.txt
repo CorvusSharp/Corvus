@@ -1,0 +1,3 @@
+raz stroka 
+dva stroka
+tri stroka
