@@ -21,7 +21,7 @@ int main() {
     freopen("output.txt", "w", stdout);
 
     // Регистрация обработчика обычных сигналов
-    for (int i = 1; i <= NUM_SIGNALS; i++) {
+    for (int i = 1; i <= 5; i++) {
         signal(i, handle_normal_signal);
     }
 
@@ -41,7 +41,7 @@ int main() {
 
     // Отправка сигналов
     printf("Отправка сигналов...\n");
-    for (int i = 1; i <= NUM_SIGNALS; i++) {
+    for (int i = 1; i <= 5; i++) {
         printf("Отправка обычного сигнала %d\n", i);
         kill(getpid(), i);
         usleep(100000); // Sleep for 0.1 second between signals
