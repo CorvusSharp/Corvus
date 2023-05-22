@@ -1,4 +1,0 @@
-first string
-second
-third
-That's all

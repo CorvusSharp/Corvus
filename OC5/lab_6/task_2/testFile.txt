@@ -1,3 +1,0 @@
-first string
-second
-Last string
