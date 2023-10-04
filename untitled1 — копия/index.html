@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Тетрис</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="root">
+    <h1>
+        <span style="color: crimson">Т</span>
+        <span style="color: orange">Е</span>
+        <span style="color: yellow">Т</span>
+        <span style="color: green">Р</span>
+        <span style="color: blue">И</span>
+        <span style="color: indigo">С</span>
+    </h1>
+</div>
+
+<script>
+    // JavaScript-код для чтения имени из локального хранилища и отображения на странице
+    const savedUsername = localStorage.getItem("tetris.username");
+    if (savedUsername) {
+        document.body.innerHTML += `<p>Вы вошли как: ${savedUsername}</p>`;
+    }
+</script>
+<script type="module" src="index.js"></script>
+<script type="module" src="./src/view.js"></script>
+<script type="module" src="./src/control.js"></script>
+</body>
+</html>

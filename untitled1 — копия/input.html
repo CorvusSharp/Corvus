@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Введите имя пользователя</title>
+</head>
+<body>
+<form action="index.html" method="get">
+    <label>
+        Введите имя:<br>
+        <input type="text" id="usernameInput" placeholder="Имя пользователя" onchange="storeName()">
+    </label>
+    <br>
+    <input type="submit" value="Ввод">
+</form>
+
+<script>
+    // JavaScript-код для сохранения имени в локальное хранилище
+    function storeName() {
+        const usernameInput = document.getElementById('usernameInput');
+        localStorage.setItem("tetris.username", usernameInput.value);
+    }
+</script>
+</body>
+</html>
