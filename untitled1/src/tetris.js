@@ -22,10 +22,9 @@ export default class Tetris {
 
         return playfield
     }
-    get_level() {
+    get_lvl() {
         return this.lines > 0 ? Math.floor(this.lines * 0.1) : 0
     }
-
 
 
     resetPlayfield() {
@@ -73,14 +72,14 @@ export default class Tetris {
     }
 
 
-    movePieceLeft() {
+    moveLeft() {
         this.currentPiece.x -= 1;
         if (this.hashCol()) {
             this.currentPiece.x += 1;
         }
     }
 
-    movePieceRight() {
+    moveRight() {
         this.currentPiece.x += 1;
         if (this.hashCol()) {
             this.currentPiece.x -= 1;
@@ -88,7 +87,7 @@ export default class Tetris {
     }
 
 
-    movePieceDown() {
+    moveDown() {
         if (this.topOut) {
             return;
         }
@@ -278,7 +277,7 @@ export default class Tetris {
         for (let index of lines) {
             this.playfield.splice(index, 1);
             this.playfield.unshift(new Array(columns).fill(0));
-            this.level = this.get_level()
+            this.level = this.get_lvl()
         }
 
         return lines.length;
@@ -299,5 +298,6 @@ export default class Tetris {
         this.currentPiece = this.nextPiece;
         this.nextPiece = this.createPiece();
     }
+
 
 }

@@ -3,9 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title>Тетрис</title>
-    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+
+
+<section id="leaderboard-container">
+
+    <a href="input.html" id="top-link">Нажмите сюда, чтобы перейти</a>
+
+    <table id="table">
+        <thead>
+        <tr>
+            <th style="color: coral">Имя</th>
+            <th style="color: crimson">Счет</th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+    </table>
+</section>
+
+
 <div id="root">
     <h1>
         <span style="color: crimson">Т</span>
@@ -17,15 +39,14 @@
     </h1>
 </div>
 
-<script>
-    // JavaScript-код для чтения имени из локального хранилища и отображения на странице
-    const savedUsername = localStorage.getItem("tetris.username");
-    if (savedUsername) {
-        document.body.innerHTML += `<p>Вы вошли как: ${savedUsername}</p>`;
-    }
+<script type="module">
+
 </script>
+
 <script type="module" src="index.js"></script>
 <script type="module" src="./src/view.js"></script>
 <script type="module" src="./src/control.js"></script>
 </body>
+
+
 </html>

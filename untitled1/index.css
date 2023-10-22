@@ -1,0 +1,101 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+#usernameInput {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 50px;
+    border: 2px solid #822;
+    border-radius: 5px;
+    background-color: #442222;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+}
+
+#leaderboard-container {
+    display: none;
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 100px rgba(0, 0, 255, 0.7);
+}
+
+#top-link {
+    display: none;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    background-color: #442222;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;  /* скругление только верхних углов */
+}
+
+#table {
+    display: none;
+    width: 100%;
+    height: calc(100% - 30px);  /* учитываем высоту ссылки и некоторый отступ */
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;  /* скругление только нижних углов */
+    border: 2px solid #822;
+    background-color: #442222;
+}
+
+
+#table td {
+    border: 1px solid #000;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+}
+
+#username {
+    width: 300px;
+    height: 50px;
+    background-color: #000;
+    border: 2px solid #00f; /* Уменьшенная ширина границы */
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px; /* Уменьшенный внутренний отступ текста от границы */
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.7); /* Тень вокруг элемента */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+}
+
+.tetris-grid {
+    display: grid;
+    grid-template-rows: repeat(20, 30px); /* 20 рядов */
+    grid-template-columns: repeat(10, 30px); /* 10 столбцов */
+    background-color: #442222;
+}
+
+#root canvas {
+    display: block;
+    margin: 0 auto;
+}

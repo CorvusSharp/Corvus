@@ -1,5 +1,6 @@
 export default class Control {
     constructor(tetris, view) {
+        this.renderFlagView = false;
         this.tetris = tetris;
         this.view = view;
         this.isPlay = false;
@@ -20,6 +21,8 @@ export default class Control {
 
 
     reset() {
+        document.getElementById('table').style.display = 'none';
+        this.renderFlagView = false;
         this.view.renderStartScreen();
         this.tetris.resetPlayfield();
         this.isPlay = false;
@@ -28,20 +31,67 @@ export default class Control {
         this.stopTimer();
     }
 
+
+    endSave() {
+        const leaderboardTableBody = document.getElementById('table').querySelector('tbody');
+        const username = localStorage.getItem("tetris.username");
+        const score = tetris.score;
+        let results = JSON.parse(localStorage.getItem("tetris.results")) || [];
+        const result = {
+            username: username,
+            score: score
+        }
+        console.log(result)
+        results.push(result);
+        results.sort((a, b) => b.score - a.score);
+        results = results.filter(result => result.username != null && result.score != null);
+        results = results.filter((result, index, self) =>
+            index === self.findIndex((t) => (
+                t.username === result.username))
+        );
+
+        // Ограничиваем количество результатов до 8
+        results = results.slice(0, 8);
+
+        localStorage.setItem("tetris.results", JSON.stringify(results));
+        leaderboardTableBody.innerHTML = '';
+        function addOrUpdateLeaderboard(name, score) {
+            console.log(score)
+            const newRow = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            nameCell.textContent = name;
+            const scoreCell = document.createElement('td');
+            scoreCell.textContent = score;
+
+            newRow.appendChild(nameCell);
+            newRow.appendChild(scoreCell);
+            leaderboardTableBody.appendChild(newRow);
+        }
+        results.forEach(result => addOrUpdateLeaderboard(result.username, result.score));
+    }
+
+
     renderView() {
+        if (this.renderFlagView === true)
+            return;
         const state = this.tetris.getState();
         if (!this.isPlay) {
             this.view.renderPauseScreen();
         }
         if (state.isGameOver) {
-            this.view.renderEndScreen(state.score);
+            this.view.renderEndScreen(state);
+            document.getElementById('table').style.display = 'block';
+            document.getElementById('top-link').style.display = 'block';
+            document.getElementById('leaderboard-container').style.display = 'block';
+            this.renderFlagView = true;
+            this.endSave();
         }else{
             this.view.render(state);
         }
     }
 
 
-    restart
+
     pauseGame() {
         this.pauseFlag = true;
         this.isPlay = false;
@@ -54,7 +104,6 @@ export default class Control {
         this.pauseFlag = false;
         this.startScreenFlag = false;
         this.startTimer();
-        this.renderView();
     }
     update() {
         this.tetris.movePieceDown();
@@ -83,7 +132,7 @@ export default class Control {
         switch (event.keyCode) {
             case 37: // LEFT
                 this.isPlay = true;
-                this.tetris.movePieceLeft();
+                this.tetris.moveLeft();
                 this.renderView();
                 break;
             case 38: // UP
@@ -93,13 +142,13 @@ export default class Control {
                 break;
             case 39: // RIGHT
                 this.isPlay = true;
-                this.tetris.movePieceRight();
+                this.tetris.moveRight();
                 this.renderView();
                 break;
             case 40: // DOWN
                 this.stopTimer();
                 this.isPlay = true;
-                this.tetris.movePieceDown();
+                this.tetris.moveDown();
                 this.renderView();
                 break;
             case 13: // ENTER
@@ -110,11 +159,15 @@ export default class Control {
                     this.pauseGame();
                 break;
             case 82:
-                if(this.startScreenFlag === false && this.pauseFlag === false)
+                document.getElementById('table').style.display = 'none';
+                document.getElementById('top-link').style.display = 'none';
+                document.getElementById('leaderboard-container').style.display = 'none';
                     this.reset();
+
                 break;
             case 32: // SPACE
                 this.tetris.fastDrop();
+                this.renderView();
                 break;
             default:
                 break;

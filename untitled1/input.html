@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Введите имя пользователя</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body>
+<div>
+    <form action="index.html" method="get">
+        <label for="usernameInput">Введите имя:</label><br>
+        <input type="text" id="usernameInput" placeholder = "username" onchange="storeName()">
+        <br>
+        <input type="submit" value="Ввод">
+    </form>
+</div>
+
+<script>
+    function storeName() {
+        const usernameInput = document.getElementById('usernameInput');
+        const username = usernameInput.value;
+
+        localStorage.setItem("tetris.username", username);
+        window.location.href = "index.html";
+    }
+
+    function setLastEnteredName() {
+        const savedName = localStorage.getItem("tetris.username");
+        if(savedName) {
+            document.getElementById('usernameInput').placeholder = savedName;
+        }
+    }
+
+    window.onload = setLastEnteredName;
+</script>
+
+
+</body>
+</html>

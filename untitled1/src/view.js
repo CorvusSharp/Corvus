@@ -108,18 +108,22 @@ export default class View {
         );
     }
 
-    renderEndScreen({score}) {
+
+
+
+    renderEndScreen(state) {
         this.clearScreen();
         this.context.fillStyle = 'white';
         this.context.font = '12px "Press Start 2P"';
         this.context.textAlign = 'center';
         this.context.textBaseline = 'middle';
         this.context.fillText(
-            'GAME OVER',
+            `\`\`GAME OVER YOUR SCORE ${state.score}\`\``,
             this.canvas.width / 2,
             this.canvas.height / 2
         );
     }
+
 
     renderPauseScreen() {
         this.context.fillStyle = 'rgba(0,0,0,0.75)'; // затемнение
