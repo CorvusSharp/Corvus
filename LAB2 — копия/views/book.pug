@@ -1,0 +1,83 @@
+extends layout
+
+block content
+    script(type= "module", defer, src="/javascripts/Book.js")
+
+
+
+
+    h1= book.title
+    p Автор: #{book.author}
+    p Дата книги:#{book.date}
+    p ID книги: #{book.id}
+    p Статус книги: #{book.status}
+
+    if book.status === "taken"
+        p Книгу взял: #{book.borrower}
+        p Дата возврата: #{book.returnDate}
+
+
+    if book.status === "available"
+        script(type= "module", defer, src="/javascripts/takeBook.js")
+        button(type="button", id="takeBook", class='w3-button w3-round-xlarge w3-green')
+            i(class="fa-solid fa-check") Take book
+
+        dialog(id="TAKEBOOK")
+            p Are you sure you want to take this book?
+            input(type="text" name="name" placeholder="Name", class="w3-input", id="nameFormTaken", required)
+            input(type="date" name="date" placeholder="Date", class="w3-input", id="dateFormTaken", required)
+
+            input(type="submit" value="Take book", class='w3-button w3-round-xlarge w3-green', id="saveButtonTake")
+            input(type="button" value="Cancel", class='w3-button w3-round-xlarge w3-red', id="cancelButtonTake")
+
+    else if book.status === "taken"
+        script(type= "module", defer, src="/javascripts/returnBook.js")
+
+        button(type="button", id="returnBook", class='w3-button w3-round-xlarge w3-green')
+            i(class="fa-solid fa-rotate-left") Return book
+        dialog(id="RETURNBOOK")
+            p Are you sure you want to return this book?
+            input(type="submit" value="Return book", class='w3-button w3-round-xlarge w3-green', id="returnBookButton")
+            input(type="button" value="Cancel", class='w3-button w3-round-xlarge w3-red', id="cancelButtonReturn")
+
+
+
+
+
+
+
+
+
+    button(type="button", id="delBook", class='w3-button w3-round-xlarge w3-red')
+        i(class="fa-solid fa-trash") Delete book
+
+    button(type="button", id="editBookForm", class='w3-button w3-round-xlarge w3-yellow')
+        i(class="fa-regular fa-pen-to-square") Edit book
+
+
+
+    dialog(id="DELETEBOOK")
+        p Are you sure you want to delete this book?
+
+        input(type="submit" value="Delete book", class='w3-button w3-round-xlarge w3-green', id="deleteBookButton")
+        input(type="button" value="Cancel", class='w3-button w3-round-xlarge w3-red', id="cancelButtonDelete")
+
+
+
+
+
+    dialog(id="EDITBOOK")
+            script(type= "module", defer, src="/javascripts/editBook.js")
+            input(type="hidden" name="id", id="editBookId")
+
+            input(type="text" name="title" placeholder="Title", class="w3-input", id="editTitle", required)
+            input(type="text" name="author" placeholder="Author", class="w3-input", id="editAuthor", required)
+            input(type="date" name="date" placeholder="Date", class="w3-input", id="editDate", required)
+
+
+            input(type="button" value="Save", class="w3-input", id="SaveBook",)
+            input(type="button" value="Cancel", class="w3-input", id="cancelButtonEdit")
+
+
+
+

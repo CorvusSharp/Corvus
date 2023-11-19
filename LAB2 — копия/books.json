@@ -1,0 +1,38 @@
+[
+  {
+    "author" : "author1",
+    "title" : "title1",
+    "date" : "date1",
+    "id" : 1,
+    "status" : "available",
+    "returnDate" : null,
+    "borrower" : null
+  },
+  {
+    "author" : "author2",
+    "title" : "title2",
+    "date" : "date2",
+    "id" : 2,
+    "status" : "taken",
+    "returnDate" : "2006-01-10",
+    "borrower" : "alex"
+  },
+  {
+    "author" : "author3",
+    "title" : "title3",
+    "date" : "date3",
+    "id" : 3,
+    "status" : "available",
+    "returnDate" : null,
+    "borrower" : null
+  },
+  {
+    "author" : "author4",
+    "title" : "title4",
+    "date" : "2006-01-11",
+    "id" : 4,
+    "status" : "taken",
+    "returnDate" : "2003-01-11",
+    "borrower" : "yariik"
+  }
+]

@@ -1,0 +1,52 @@
+extends layout
+
+block content
+    script(type= "module", defer, src="/javascripts/Books.js")
+
+
+    h1= title
+    p Welcome to #{title}
+
+
+    select(id="selector", class='w3-button w3-round-xlarge w3-grey')
+        option(value="all") All
+        option(value="available") Available
+        option(value="taken") Taken
+        option(value="overdue") Overdue
+
+
+    table(class= "w3-table-all w3-hoverable")
+        tbody
+            tr
+                th Title
+                th Author
+                th Date
+                th Status
+                th Return Date
+        tbody(id="placer")
+            each book in books
+                tr
+                    td
+                        a(href="/book/"+ book.id) #{book.title}
+                    td #{book.author}
+                    td #{book.date}
+                    td #{book.status}
+                    td #{book.returnDate}
+
+    button(id = "addButton", type="button" class='w3-button w3-round-xlarge w3-green')
+        i(class="fa-solid fa-plus") Add book
+
+    dialog(id="ADDBOOK")
+        form(action="/books" method="post", id="addBookForm")
+            input(type="text" name="title" placeholder="Title", class="w3-input", required)
+            input(type="text" name="author" placeholder="Author", class="w3-input", required)
+            input(type="date" name="date" placeholder="Date", class="w3-input", required)
+
+            input(type="button" value="Cancel", class='w3-button w3-round-xlarge w3-red', id="cancelButton")
+            input(type="submit" value="Add book", class='w3-button w3-round-xlarge w3-green', id="addBookButton")
+
+
+
+
+
+
