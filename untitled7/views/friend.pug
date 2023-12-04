@@ -1,0 +1,23 @@
+extends layout
+block content
+    h1=title
+    div#friendlist
+        table#friendlist-table
+            thead
+                tr
+                    th Name
+                    th Email
+                    th dateBorn
+                    th Role
+                    th Status
+
+            tbody(id='friendlistTable')
+                each friend in friendList
+                    tr
+                        td
+                            a(href='/users/' + friend.id)=friend.name
+                        td=friend.email
+                        td=friend.dateBorn
+                        td=friend.role
+                        td=friend.status
+

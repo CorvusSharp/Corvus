@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  script(src='/javascripts/users.js', defer, type='module')
+
+
+  h1= title
+  p Welcome to #{title}
+  div#users
+    table#users-table
+      thead
+        tr
+          th Name
+          th Email
+          th dateBorn
+          th Role
+          th Status
+
+
+      tbody(id='usersTable')
+
+
+

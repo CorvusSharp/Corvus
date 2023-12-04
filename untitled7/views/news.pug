@@ -1,0 +1,23 @@
+
+extends layout
+
+block content
+    script(src='/javascripts/news.js', defer, type='module')
+
+    h1= title
+    p Welcome to #{title}
+    div#news
+        table#news-table
+            thead
+                tr
+                    th User
+                    th msg
+                    th Date
+
+            tbody(id='newsTable')
+                each news in msg
+                    tr
+                        td
+                            a(href=`/users/${news.id}`) #{news.name}
+                        td= news.msg
+                        td= news.date

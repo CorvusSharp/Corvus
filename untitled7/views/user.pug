@@ -1,0 +1,63 @@
+extends layout
+
+block content
+    script(src='/javascripts/user.js', defer, type='module')
+
+    h1= title
+    p ID:
+        span(id="id")= user.id
+    p Name:
+        span(id="name")= user.name
+    p Email:
+        span(id='email')= user.email
+    p Date Born:
+        span(id='dateBorn')= user.dateBorn
+    p Role:
+        span(id='role')= user.role
+    p Status:
+        span(id='status')= user.status
+
+    // Добавление изображения пользователя
+    img(class='image' src='/' + user.img, alt="User Image")
+
+    // Добавление кнопок управления
+    button(id=`edit`) Edit
+
+    div(id="dialog-form" style="display: none;" title="Edit user")
+        form#form-edit
+            div
+                label(for='form-name') Name:
+                input(id='form-name' name='name', type='text', value=user.name)
+            div
+                label(for='form-email') Email:
+                input(id='form-email' name='email', type='email', value=user.email)
+            div
+                label(for='form-dateBorn') Date Born:
+                input(id='form-dateBorn', name='dateBorn', type='date', value=user.dateBorn)
+            div
+                label(for='form-role') Role:
+                select(id='form-role' name='form-role')
+                    option(value='user') User
+                    option(value='admin') Admin
+            div
+                label(for='form-status') Status:
+                select(name='status' id='form-status')
+                    option(value='disabled') Disabled
+                    option(value='active') Active
+                    option(value='banned') Banned
+
+
+
+    button(id='SendMessage') send message
+    div(id="dialog-form-send" style="display: none;" title="Send message")
+        form#form-send
+            div
+                label(for='form-msg') Message:
+                input(id='form-msg' name='msg', type='text', value='')
+            div
+                label(for='form-date') Date:
+                input(id='form-date', name='date', type='date', value='')
+
+
+    button(id='ButtonFrinedList') FriendList
+    button(id='ButtonNewsList') NewsList

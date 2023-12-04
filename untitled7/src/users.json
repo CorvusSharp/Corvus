@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Doe low",
+    "dateBorn": "01-01-1991",
+    "email": "mail@mail.ru",
+    "status": "active",
+    "friendlist": [1,4,6],
+    "role": "user",
+    "img": "images/3.png",
+    "msg": [{
+      "msg": "xui",
+      "date": "1941-01-11"
+    }]
+  },
+  {
+    "id": 2,
+    "name": "Frank rebra",
+    "dateBorn": "1991-01-02",
+    "email": "frank@mail.ru",
+    "status": "disable",
+    "friendlist": [1],
+    "role": "user",
+    "img": "images/2.png",
+    "msg": [{
+      "msg": "ghbdtn",
+      "date": "1941-01-11"
+    }]
+  },
+  {
+    "id": 3,
+    "name": "dima smirnov",
+    "email": "dim@mail.ru",
+    "dateBorn": "1992-03-02",
+    "status": "active",
+    "friendlist": [1,2,4,5],
+    "role": "admin",
+    "img": "images/1.png",
+    "msg": [{
+      "msg": "ghbdtn",
+      "date": "1941-01-11"
+    }]
+  },
+  {
+    "id": 4,
+    "name": "danil korenev",
+    "email": "dan@mail.ru",
+    "dateBorn": "1992-01-03",
+    "status": "active",
+    "friendlist": [1,2,3,5],
+    "role": "user",
+    "img": "images/4.png",
+    "msg": [{
+      "msg": "ghbdtn",
+      "date": "1941-01-11"
+    }, {
+      "msg": "228",
+      "date": "1941-01-11"
+    }]
+  },
+  {
+    "id": 5,
+    "name": "yarik gerasimenko",
+    "email": "yarik@mail.ru",
+    "dateBorn": "1200-03-03",
+    "status": "disabled",
+    "friendlist": [1,2,3,4],
+    "role": "admin",
+    "img": "images/5.png",
+    "msg": [{
+      "msg": "ghbdtn",
+      "date": "1941-01-11"
+    }]
+  }
+]

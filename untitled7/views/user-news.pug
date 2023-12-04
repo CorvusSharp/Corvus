@@ -1,0 +1,15 @@
+extends layout
+block content
+    h1=title
+    div#newslist
+        table#newslist-table
+            thead
+                tr
+                    th Text
+                    th Date
+
+            tbody(id='newslistTable')
+                each news in msgList
+                    tr
+                        td=news.msg
+                        td=news.date
