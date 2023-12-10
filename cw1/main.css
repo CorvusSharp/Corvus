@@ -1,0 +1,72 @@
+#level-fail-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    display: none;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#score-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    display: none;
+}
+
+#score-table {
+    width: 100%; /* Занимает всю ширину своего контейнера */
+    border-collapse: collapse; /* Убираем двойные границы между ячейками */
+}
+
+#score-table th,
+#score-table td {
+    border: 1px solid black; /* Черная граница для ячеек */
+    padding: 8px; /* Отступы внутри ячеек */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+#score-table thead {
+    background-color: #f0f0f0; /* Фон заголовка таблицы */
+}
+
+#score-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Чередующийся фон для строк таблицы */
+}
+
+#level-complete-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    display: block;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Цвет фона, если нужен */
+}
+
+canvas {
+    border: 1px solid black; /* Для визуализации границ canvas */
+}

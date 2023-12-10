@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div id="score-section" style="display: none;">
+    <table id="score-table">
+        <thead>
+        <tr>
+            <th>Имя игрока</th>
+            <th>Счет убийств</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <button id="restart-button">Начать заново</button>
+    </div>
+</div>
+
+<div id="canvas-container">
+    <canvas id="canvas" width="640" height="640"></canvas>
+
+</div>
+
+<div id="level-complete-menu" style="display: none">
+    <p>Вы прошли этот уровень!</p>
+    <button onclick="import('./main.js').then((module) => module.play())" id="next-level-button">Перейти к следующему</button>
+</div>
+
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
