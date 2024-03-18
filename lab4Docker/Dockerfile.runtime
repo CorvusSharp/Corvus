@@ -1,0 +1,15 @@
+FROM ubuntu:22.04
+
+RUN apt-get update && \
+    apt-get install -y openjdk-17-jdk && \
+    apt-get clean && \
+    useradd -u 1000 -ms /bin/bash springuser
+
+USER springuser
+
+WORKDIR /home/springuser
+
+COPY --from=petclinic-build:v1 /build/spring-petclinic/target/spring-petclinic-3.2.0-SNAPSHOT.jar /home/springuser/app.jar
+
+ENTRYPOINT ["java", "-jar", "/home/springuser/app.jar"]
+ 
